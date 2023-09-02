@@ -53,6 +53,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Python
+* [Создание виртуального окружения Python через Poetry](python-poetry.md)
 * [Установка пакетов в контейнер Dokku через плагин dokku-apt](установка-пакетов-в-контейнер-dokku-через.md)
 * [Примеры yaml в Python](примеры-yaml-в-python.md)
 * [Алгоритм Flood fill на Python](алгоритм-flood-fill-на-python.md)

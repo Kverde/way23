@@ -1,3 +1,6 @@
+## 2023.09
+* [Создание виртуального окружения Python через Poetry](python-poetry.md)
+
 ## 2023.08
 * [Советы по мессенджеру Element](element-advice.md)
 * [Установка Linux на USB-флеш-накопитель](linux-on-usb.md)
