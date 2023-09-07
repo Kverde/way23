@@ -1,4 +1,5 @@
 ## 2023.09
+* [Шаблон проекта Python с Poetry и pytest](python-poetry-pytest.md)
 * [Создание виртуального окружения Python через Poetry](python-poetry.md)
 
 ## 2023.08
