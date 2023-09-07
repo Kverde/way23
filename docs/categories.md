@@ -54,6 +54,7 @@
 
 ## Python
 * [Шаблон проекта Python с Poetry и pytest](python-poetry-pytest.md)
+* [Использование make для проекта на Python и Poetry](python-make.md)
 * [Создание виртуального окружения Python через Poetry](python-poetry.md)
 * [Установка пакетов в контейнер Dokku через плагин dokku-apt](установка-пакетов-в-контейнер-dokku-через.md)
 * [Примеры yaml в Python](примеры-yaml-в-python.md)
