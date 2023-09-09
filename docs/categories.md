@@ -131,6 +131,7 @@
 * [Игра Super Markup Man](super-markup-man.md)
 
 ## Информационная безопасность
+* [Криптоконтейнеры и облачные хранилища (VeraCrypt и Cryptomator)](crypto-cloud.md)
 * [Советы по мессенджеру Element](element-advice.md)
 * [Запуск нескольких копий Element с разными аккаунтами](element-profiles.md)
 * [Сервисы одноразовых заметок](one-time-messages.md)
