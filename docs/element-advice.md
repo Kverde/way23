@@ -14,10 +14,11 @@ tags:
 * [Регистрация в Element.io](регистрация-в-element-io.md)
 * [Запуск нескольких профилей в Element](element-profiles.md) (и хранение профиля в криптоконтейнере).
 
-Документация и статьи:
+Документация, инструкции:
 
 * [Документация к Matrix на примере Element](https://matrix.org/docs/chat_basics/matrix-for-im/)
 * [Русскоязычное сообщество протокола Матрикс (Matrix)](https://ru-matrix.org/wiki/Главная)
+* [Курс по Element на Matrix](https://www.youtube.com/watch?v=eS54NhMrxzs&list=PLeDR6lYFEHWG_trdDtfY8A9JiNRpmUDd7&pp=iAQB)
 
 ## Оглавление
 
