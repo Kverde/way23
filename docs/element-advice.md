@@ -17,6 +17,7 @@ tags:
 Документация и статьи:
 
 * [Документация к Matrix на примере Element](https://matrix.org/docs/chat_basics/matrix-for-im/)
+* [Русскоязычное сообщество протокола Матрикс (Matrix)](https://ru-matrix.org/wiki/Главная)
 
 ## Оглавление
 
