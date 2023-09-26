@@ -52,3 +52,13 @@ tags:
 
 Популярная книга на тему социальной инженерии.
 
+## Другое
+
+Эти ссылки не проверены, но по ним может быть полезная информация.
+
+* [The Hitchhiker’s Guide to Online Anonymity](https://anonymousplanet.org/guide.html)
+* [Privacy Guides](https://www.privacyguides.org/en/)
+* [The New Oil](https://thenewoil.org/en/)
+* [Privacy Tools](https://www.privacytools.io/)
+* [Go Incognito: A Guide to Security, Privacy, & Anonymity](https://github.com/techlore/go-incognito)
+
