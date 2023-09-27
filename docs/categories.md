@@ -2,6 +2,9 @@
 
 [[toc]]
 
+## BIOS
+* [Выключение Intel RST в BIOS](turn-off-rst.md)
+
 ## Delphi
 * [Exercism.io](exercism-io.md)
 * [Отличия строк, статических и динамических массивов в Delphi](отличия-строк-статических-и-динамиче.md)

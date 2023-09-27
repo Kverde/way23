@@ -1,4 +1,5 @@
 ## 2023.09
+* [Выключение Intel RST в BIOS](turn-off-rst.md)
 * [Теория, практика и Спиноза](theory-practice.md)
 * [Материалы по информационной безопасности](security-links.md)
 * [Криптоконтейнеры и облачные хранилища (VeraCrypt и Cryptomator)](crypto-cloud.md)
