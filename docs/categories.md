@@ -178,6 +178,7 @@
 * [Карьерная страшилка](карьерная-страшилка.md)
 
 ## Операционные системы
+* [ROSA ImageWriter для создания Live-USB на Linux](rosa-live-usb.md)
 * [Установка Linux на USB-флеш-накопитель](linux-on-usb.md)
 * [Установка шрифтов в ParrotOS](parrotos-install-font.md)
 * [Настройка раскладки Эсперанто в ParrotOS](parrotos-esperanto-layout.md)

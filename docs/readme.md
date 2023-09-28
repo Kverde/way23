@@ -1,4 +1,5 @@
 ## 2023.09
+* [ROSA ImageWriter для создания Live-USB на Linux](rosa-live-usb.md)
 * [Выключение Intel RST в BIOS](turn-off-rst.md)
 * [Теория, практика и Спиноза](theory-practice.md)
 * [Материалы по информационной безопасности](security-links.md)
