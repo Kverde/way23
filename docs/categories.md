@@ -2,6 +2,9 @@
 
 [[toc]]
 
+## Android
+* [Отключение напоминания про Mi Messaging в Android](android-disable-mi-message.md)
+
 ## BIOS
 * [Выключение Intel RST в BIOS](turn-off-rst.md)
 
@@ -178,7 +181,7 @@
 * [Карьерная страшилка](карьерная-страшилка.md)
 
 ## Операционные системы
-* [ROSA ImageWriter для создания Live-USB на Linux](rosa-live-usb.md)
+* [Rosa ImageWriter для создания Live-USB на Linux](rosa-live-usb.md)
 * [Установка Linux на USB-флеш-накопитель](linux-on-usb.md)
 * [Установка шрифтов в ParrotOS](parrotos-install-font.md)
 * [Настройка раскладки Эсперанто в ParrotOS](parrotos-esperanto-layout.md)
