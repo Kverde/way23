@@ -197,6 +197,7 @@
 * [VirtualBox создание и настройка виртуальной машины](virtualbox-создание-и-настройка-виртуальной-м.md)
 
 ## Программы
+* [Анализ занятого места на диске через MATE Disk Usage Analyzer](mate-disk-usage-analyzer.md)
 * [Установка Dokku](установка-dokku.md)
 * [Dokku. Управление пользователями](dokku-управление-пользователями.md)
 * [MarkText — редактор Markdown](marktext.md)

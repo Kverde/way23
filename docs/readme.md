@@ -1,3 +1,6 @@
+## 2023.10
+* [Анализ занятого места на диске через MATE Disk Usage Analyzer](mate-disk-usage-analyzer.md)
+
 ## 2023.09
 * [Отключение напоминания про Mi Messaging в Android](android-disable-mi-message.md)
 * [Rosa ImageWriter для создания Live-USB на Linux](rosa-live-usb.md)
