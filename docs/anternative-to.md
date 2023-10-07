@@ -27,4 +27,3 @@ tags:
 * [LibreTrack: Свобода в мире программного обеспечения](https://www.youtube.com/watch?v=CpFcd-qInM8)
 * [LibreTrack: Необходимость приватности](https://www.youtube.com/watch?v=rP6VfNealUs)
 * [Сайт gnu.org: Что такое свободная программа?](https://www.gnu.org/philosophy/free-sw.ru.html)
-https://libretranslate.com
