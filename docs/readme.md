@@ -1,4 +1,5 @@
 ## 2023.10
+* [Поиск свободных аналогов программ на alternativeto.net](anternative-to.md)
 * [Анализ занятого места на диске через MATE Disk Usage Analyzer](mate-disk-usage-analyzer.md)
 
 ## 2023.09
