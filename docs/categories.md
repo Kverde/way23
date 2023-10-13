@@ -181,6 +181,7 @@
 * [Карьерная страшилка](карьерная-страшилка.md)
 
 ## Операционные системы
+* [Установка сервера Debian на VirtualBox](debian-server-install-vb.md)
 * [Rosa ImageWriter для создания Live-USB на Linux](rosa-live-usb.md)
 * [Установка Linux на USB-флеш-накопитель](linux-on-usb.md)
 * [Установка шрифтов в ParrotOS](parrotos-install-font.md)
