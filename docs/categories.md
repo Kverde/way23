@@ -137,6 +137,7 @@
 * [Игра Super Markup Man](super-markup-man.md)
 
 ## Информационная безопасность
+* [Как добавить SSH ключ на сервер](add-ssh-key.md)
 * [Материалы по информационной безопасности](security-links.md)
 * [Криптоконтейнеры и облачные хранилища (VeraCrypt и Cryptomator)](crypto-cloud.md)
 * [Советы по мессенджеру Element](element-advice.md)
