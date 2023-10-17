@@ -48,18 +48,31 @@ Debian не содержит отдельной версии для сервер
 
 ![](images/debian-vb/debian-08.png)
 
-При установке Debian без графического окружения автоматически не устанавливаются пакеты, нужные для работы сети. Для их установки запустите виртуальную машину, введите логин и пароль. В меню `Devices` — `Optical devices` вставьте диск с дистрибутивом.
-
-![](images/debian-vb/debian-09.png)
-
-Сперва установите `sudo`:
+При установке Debian без графического окружения автоматически не устанавливаются пакеты, нужные для работы сети. Для возможности установки пакетов из онлайн репозиториев, а не с диска, измените файл `/etc/apt/sources.list`:
 
 ```
-su # войти в режим суперпользователя
+su -l # войти в режим суперпользователя
+nano /etc/apt/sources.list
+```
+
+Удалите из него все строки (`ctrl+k`) и введете следующую строку:
+
+```
+deb http://deb.debian.org/debian bookworm main
+```
+
+Теперь установите `sudo` ([Советы после установки Debian](https://wiki.debian.org/DebianInstall#Post-Install_Tips)):
+
+```
+apt update
 apt install sudo
-sudo usermod -aG sudo user # добавить пользователя user в группу sudo 
+adduser user sudo # добавить пользователя user в группу sudo 
 exit # выйти из режима суперпользователя
 ```
+
+Описание команды `adduser` из `man`:
+
+> Add an existing user to an existing group. If called with two non-option arguments, adduser will add  an  existing user to an existing group.
 
 Добавление пользователя в группу `sudo` нужно, чтобы у пользователя была возможность использовать команду `sudo`. Чтобы добавление в группу сработало выйдите из пользователя командой `logout` и снова введите логин и пароль.
 
@@ -68,6 +81,13 @@ exit # выйти из режима суперпользователя
 ```
 sudo apt install network-manager 
 sudo apt install net-tools 
+```
+
+И затем обновите все пакеты:
+
+```
+sudo apt update
+sudo apt upgrade
 ```
 
 Выключите виртуальную машину и запустите виртуальную машину в фоновом режиме. Теперь вы можете подключится к серверу по ssh из консоли используя имя сервера и пользователя указанные при установке.

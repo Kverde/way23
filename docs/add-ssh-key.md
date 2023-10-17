@@ -22,7 +22,7 @@ ssh-keygen -f ./.ssh/debian-server
 Теперь нужно передать открытый ключ на сервер и прописать его там в настройках пользователя. Для этого выполните команду
 
 ```
-ssh-copy-id -i debian-server user@debian-server
+ssh-copy-id -i ./.ssh/debian-server user@debian-server
 ```
 
 В параметре `-i` передано название файла ключа. `user@debian-server` — адрес сервера в формате `пользователь@адрес_сервера`. После запуска команды придется один раз ввести пароль пользователя.
@@ -31,6 +31,21 @@ ssh-copy-id -i debian-server user@debian-server
 
 ```
 ssh user@debian-server
+```
+
+Чтобы [убрать сообщение](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.html#non-free-split) при команде `apt update` создайте файл
+
+```
+sudo nano /etc/apt/apt.conf.d/no-bookworm-firmware.conf
+```
+
+И введите в него следующий текст:
+
+```
+# Description:
+# https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.html#non-free-split
+
+APT::Get::Update::SourceListWarnings::NonFreeFirmware "false";
 ```
 
 Чтобы выйти из подключения введите команду
