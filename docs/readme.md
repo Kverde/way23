@@ -1,4 +1,5 @@
 ## 2023.10
+* [Команда base64 в Linux](gnu-base64.md)
 * [Как добавить SSH ключ на сервер](add-ssh-key.md)
 * [Установка сервера Debian на VirtualBox](debian-server-install-vb.md)
 * [Поиск свободных аналогов программ на alternativeto.net](anternative-to.md)
