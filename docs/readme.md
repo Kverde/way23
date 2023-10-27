@@ -1,4 +1,5 @@
 ## 2023.10
+* [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)
 * [Команда base64 в Linux](gnu-base64.md)
 * [Как добавить SSH ключ на сервер](add-ssh-key.md)
 * [Установка сервера Debian на VirtualBox](debian-server-install-vb.md)

@@ -58,6 +58,9 @@
 * [VuePress добавление кастомных стилей](vuepress-добавление-кастомных-стилей.md)
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
+## Linux
+* [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)
+
 ## Python
 * [Шаблон проекта Python с Poetry и pytest](python-poetry-pytest.md)
 * [Использование make для проекта на Python и Poetry](python-make.md)
