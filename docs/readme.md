@@ -1,5 +1,6 @@
 ## 2023.10
 * [Установка приложения в Linux из deb-пакета](linux-install-deb.md)
+* [Подключение к базе данных PostgreSQL через DBeaver](dbeaver-connect-pg.md)
 * [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)
 * [Команда base64 в Linux](gnu-base64.md)
 * [Как добавить SSH ключ на сервер](add-ssh-key.md)
@@ -354,4 +355,3 @@
 * [Rapid Environment Editor - редактор системных переменных Windows](rapid-environment-editor-редактор-системных-переменных-windows.md)
 * [Notepad++ DSpellChecker проверка орфографии](notepad-dspellchecker-настройка-проверки-орфографии.md)
 * [Блог открыт!](блог-открыт.md)
-* [](dbeaver-connect-pg.md)
