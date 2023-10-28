@@ -1,5 +1,5 @@
 ---
-title: "Установка PostgreSQL в Dokku"
+title: "Установка плагина PostgreSQL в Dokku"
 date: "2017-09-11"
 categories: 
   - "Базы данных"

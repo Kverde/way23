@@ -1,4 +1,5 @@
 ## 2023.10
+* [Установка базы данных PostgreSQL внутри Docker](install-postgresql-docker.md)
 * [Установка приложения в Linux из deb-пакета](linux-install-deb.md)
 * [Подключение к базе данных PostgreSQL через DBeaver](dbeaver-connect-pg.md)
 * [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)
@@ -317,7 +318,7 @@
 * [PL/SQL Developer. 2. Выполнение запросов и редактирование данных.](plsql-developer-выполнение-запросов-и-редактиров.md)
 * [Копирование файлов через буфер обмена при подключении по RDP](копирование-файлов-через-буфер-обмен.md)
 * [Установка Oracle Instant Client в Windows](установка-oracle-instant-client-в-windows.md)
-* [Установка PostgreSQL в Dokku](установка-postgresql-в-dokku.md)
+* [Установка плагина PostgreSQL в Dokku](установка-postgresql-в-dokku.md)
 * [Dokku. Переменные окружения](dokku-переменные-окружения.md)
 * [Установка Ubuntu Server в VirtualBox](установка-ubuntu-server-в-virtualbox.md)
 * [HashTab - отображение хешей в свойствах файла Windows](hashtab-отображение-хешей-в-свойствах-файла.md)

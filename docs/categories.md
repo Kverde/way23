@@ -50,6 +50,9 @@
 * [Сборка проектов Delphi из консоли](сборка-проектов-delphi-из-консоли.md)
 * [Конфигурации сборки Delphi во внешнем файле](конфигурации-сборки-delphi-во-внешнем-файл.md)
 
+## Docker
+* [Установка базы данных PostgreSQL внутри Docker](install-postgresql-docker.md)
+
 ## Frontend
 * [Объединение ячеек в таблицах VuePress](объединение-ячеек-в-таблицах-vuepress.md)
 * [Плагин VuePress для отображения формул vuepress-plugin-katex](плагин-vuepress-для-отображения-формул-vuepress-plugin-katex.md)
@@ -111,6 +114,7 @@
 * [Особенности операций целочисленного деления и взятия остатка при работе с отрицательными числами](особенности-операций-целочисленного.md)
 
 ## Базы данных
+* [Установка базы данных PostgreSQL внутри Docker](install-postgresql-docker.md)
 * [Подключение к базе данных PostgreSQL через DBeaver](dbeaver-connect-pg.md)
 * [Как восстановить удаленные данные из Oracle?](restore-data-oracle.md)
 * [Вывод простых чисел на Oracle](вывод-простых-чисел-на-oracle.md)
@@ -119,7 +123,7 @@
 * [Аудит данных в Oracle на основе пакетных переменных и триггеров](аудит-данных-в-oracle-на-основе-пакетных-пер.md)
 * [Oracle. not in и null](oracle-not-in-и-null.md)
 * [Установка Oracle Instant Client в Windows](установка-oracle-instant-client-в-windows.md)
-* [Установка PostgreSQL в Dokku](установка-postgresql-в-dokku.md)
+* [Установка плагина PostgreSQL в Dokku](установка-postgresql-в-dokku.md)
 
 ## Блог
 * [Flameshot — скриншоты в Linux](flameshot-ubuntu.md)
