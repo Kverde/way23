@@ -59,6 +59,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Установка приложения в Linux из deb-пакета](linux-install-deb.md)
 * [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)
 
 ## Python
