@@ -125,6 +125,7 @@
 * [Перенос блога с Wordpress на Vuepress](wordpress-to-vuepress.md)
 * [Новости блога](новости-блога.md)
 * [Блог открыт!](блог-открыт.md)
+* [](dbeaver-connect-pg.md)
 
 ## Другое
 * [Как скопировать форматированный текст с caute.ru](copy-caute.md)

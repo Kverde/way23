@@ -354,3 +354,4 @@
 * [Rapid Environment Editor - редактор системных переменных Windows](rapid-environment-editor-редактор-системных-переменных-windows.md)
 * [Notepad++ DSpellChecker проверка орфографии](notepad-dspellchecker-настройка-проверки-орфографии.md)
 * [Блог открыт!](блог-открыт.md)
+* [](dbeaver-connect-pg.md)
