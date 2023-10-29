@@ -1,6 +1,6 @@
 ## 2023.10
 * [Установка базы данных PostgreSQL внутри Docker](install-postgresql-docker.md)
-* [Использование CryptoPad.org вместо Google Docs](cryptopad-vs-googledocs.md)
+* [Использование CryptoPad вместо Google Docs](cryptopad-vs-googledocs.md)
 * [Установка приложения в Linux из deb-пакета](linux-install-deb.md)
 * [Подключение к базе данных PostgreSQL через DBeaver](dbeaver-connect-pg.md)
 * [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)

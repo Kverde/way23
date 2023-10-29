@@ -1,5 +1,5 @@
 ---
-title: "Использование CryptoPad.org вместо Google Docs"
+title: "Использование CryptoPad вместо Google Docs"
 date: "2023-10-29"
 categories:
   - "Программы"

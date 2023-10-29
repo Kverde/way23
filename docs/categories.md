@@ -208,7 +208,7 @@
 * [VirtualBox создание и настройка виртуальной машины](virtualbox-создание-и-настройка-виртуальной-м.md)
 
 ## Программы
-* [Использование CryptoPad.org вместо Google Docs](cryptopad-vs-googledocs.md)
+* [Использование CryptoPad вместо Google Docs](cryptopad-vs-googledocs.md)
 * [Команда base64 в Linux](gnu-base64.md)
 * [Поиск свободных аналогов программ на alternativeto.net](anternative-to.md)
 * [Анализ занятого места на диске через MATE Disk Usage Analyzer](mate-disk-usage-analyzer.md)
