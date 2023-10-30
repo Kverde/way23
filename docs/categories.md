@@ -158,7 +158,7 @@
 * [Google Takeout — сервис экспорта данных из Google](google-takeout.md)
 * [Отключение EXIF на телефоне](sec-exif.md)
 * [Настройки приватности Telegram](sec-telegram.md)
-* [Удаление старых аккаунтов](sec-delete-accounts.md)
+* [Поиск и удаление старых аккаунтов и другой личной информации в интернете](sec-delete-accounts.md)
 * [Чекл-лист по чистке VK](clear-vk.md)
 
 ## Книги
