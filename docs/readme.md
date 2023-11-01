@@ -1,3 +1,6 @@
+## 2023.11
+* [Базовые операции с файлами и каталогами в Linux](linux-nav.md)
+
 ## 2023.10
 * [Установка базы данных PostgreSQL внутри Docker](install-postgresql-docker.md)
 * [Использование CryptoPad вместо Google Docs](cryptopad-vs-googledocs.md)

@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Базовые операции с файлами и каталогами в Linux](linux-nav.md)
 * [Установка приложения в Linux из deb-пакета](linux-install-deb.md)
 * [lsb_release — узнать версию дистрибутива Linux](linux-lsb-release.md)
 
