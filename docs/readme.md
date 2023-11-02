@@ -1,4 +1,5 @@
 ## 2023.11
+* [Стандартный потоки Linux: stdin, stdout, stderr](linux-stdin-stdout-stderr.md)
 * [Базовые операции с файлами и каталогами в Linux](linux-nav.md)
 
 ## 2023.10
