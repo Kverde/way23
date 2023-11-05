@@ -1,4 +1,5 @@
 ## 2023.11
+* [Создание переодических заданий через cron в Linux](linux-cron.md)
 * [Временные метки файлов Linux: atime, ctime, mtime](linux-atime-ctime-mtime.md)
 * [Базовые операции с файлами и каталогами в Linux 2](linux-files-dir.md)
 * [Стандартный потоки Linux: stdin, stdout, stderr](linux-stdin-stdout-stderr.md)
