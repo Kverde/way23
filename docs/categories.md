@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [less и man в Linux](less-man-linux.md)
 * [Группы пользователей Linux в Debian](linux-user-group.md)
 * [Добавление пользователей в Debian](debian-adduser.md)
 * [Создание переодических заданий через cron в Linux](linux-cron.md)
