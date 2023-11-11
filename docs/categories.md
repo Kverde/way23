@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Установка прав на файлы в Linux с помощью chmod](linux-chmod.md)
 * [Владелец и группа файла в Linux](linux-chown-chgrp.md)
 * [less и man в Linux](less-man-linux.md)
 * [Группы пользователей Linux в Debian](linux-user-group.md)
