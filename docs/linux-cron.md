@@ -46,3 +46,7 @@ Cron — приложение для периодического запуска
 ```
 sudo journalctl -S today -u cron
 ```
+
+## Ссылки
+
+* [crontab.guru](https://crontab.guru/) — разъясняет время в формате crontab.
