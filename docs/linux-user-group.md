@@ -60,3 +60,15 @@ user@server:~$ sudo delgroup mygroup
 Removing group `mygroup' ...
 Done.
 ```
+
+Чтобы изменить пароль для группы введите команду `gpasswd`.
+
+```
+user@debian-server:~$ sudo addgroup group01
+user@debian-server:~$ sudo gpasswd group01
+Changing the password for group group01
+New Password: 
+Re-enter new password: 
+```
+
+Пароль группы применяется при использовании команды `newgrp` ([подробнее про команду](linux-chown-chgrp.md)), когда пользователь не состоит в переданной в команду группе.

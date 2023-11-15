@@ -1,4 +1,5 @@
 ## 2023.11
+* [Права на директории в Linux](linux-chmod-directory.md)
 * [Переключение между пользователями через su и смена пароля пользователя](linux-su-passwd.md)
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
 * [Установка прав на файлы в Linux с помощью chmod](linux-chmod.md)

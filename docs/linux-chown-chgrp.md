@@ -56,3 +56,5 @@ user@debian-server:~$ stat file2.txt
 ...
 Access: (0644/-rw-r--r--)  Uid: ( 1000/    user)   Gid: (  995/  docker)
 ```
+
+Если пользователь не состоит в переданной в команду `newgrp` группе, то потребуется ввод [пароля группы](linux-user-group.md).
