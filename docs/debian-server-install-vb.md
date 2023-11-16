@@ -90,7 +90,22 @@ sudo apt update
 sudo apt upgrade
 ```
 
-Выключите виртуальную машину и запустите виртуальную машину в фоновом режиме. Теперь вы можете подключится к серверу по ssh из консоли используя имя сервера и пользователя указанные при установке.
+Чтобы [убрать сообщение](https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.html#non-free-split) при команде `apt update` создайте файл
+
+```
+sudo nano /etc/apt/apt.conf.d/no-bookworm-firmware.conf
+```
+
+И введите в него следующий текст:
+
+```
+# Description:
+# https://www.debian.org/releases/bookworm/amd64/release-notes/ch-information.html#non-free-split
+
+APT::Get::Update::SourceListWarnings::NonFreeFirmware "false";
+```
+
+Выключите виртуальную машину и запустите виртуальную машину в фоновом режиме. Теперь вы можете [подключится к серверу по ssh](add-ssh-key.md) из консоли используя имя сервера и пользователя указанные при установке.
 
 ```
 ssh user@debian-server
