@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Создание и сжатие архивов в Linux: tar и zip](linux-tar-zip.md)
 * [Права на директории в Linux](linux-chmod-directory.md)
 * [Переключение между пользователями через su и смена пароля пользователя](linux-su-passwd.md)
 * [Установка прав на файлы в Linux с помощью chmod](linux-chmod.md)

@@ -1,4 +1,5 @@
 ## 2023.11
+* [Создание и сжатие архивов в Linux: tar и zip](linux-tar-zip.md)
 * [Права на директории в Linux](linux-chmod-directory.md)
 * [Переключение между пользователями через su и смена пароля пользователя](linux-su-passwd.md)
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
