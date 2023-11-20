@@ -1,4 +1,5 @@
 ## 2023.11
+* [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
 * [Создание дампа PostgreSQL](pg-dump.md)
 * [Копирование файлов по ssh и из контейнера Docker](copy-files-ssh-docker.md)
 * [Создание и сжатие архивов в Linux: tar и zip](linux-tar-zip.md)

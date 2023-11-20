@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
 * [Копирование файлов по ssh и из контейнера Docker](copy-files-ssh-docker.md)
 * [Создание и сжатие архивов в Linux: tar и zip](linux-tar-zip.md)
 * [Права на директории в Linux](linux-chmod-directory.md)
