@@ -1,4 +1,5 @@
 ## 2023.11
+* [Установка i2p в Linux](install-i2p-linux.md)
 * [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
 * [Создание дампа PostgreSQL](pg-dump.md)
 * [Копирование файлов по ssh и из контейнера Docker](copy-files-ssh-docker.md)
