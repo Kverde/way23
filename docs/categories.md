@@ -226,6 +226,7 @@
 * [VirtualBox создание и настройка виртуальной машины](virtualbox-создание-и-настройка-виртуальной-м.md)
 
 ## Программы
+* [Vagrant 1: Установка Vagrant и запуск виртуальной машины из локального образа](vagrant01-install.md)
 * [Использование CryptoPad вместо Google Docs](cryptopad-vs-googledocs.md)
 * [Команда base64 в Linux](gnu-base64.md)
 * [Поиск свободных аналогов программ на alternativeto.net](anternative-to.md)
