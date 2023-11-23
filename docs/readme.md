@@ -1,4 +1,5 @@
 ## 2023.11
+* [Vagrant 2: запуск проекта внутри Vagrant](vagrant02-work.md)
 * [Vagrant 1: Установка Vagrant и запуск виртуальной машины из локального образа](vagrant01-install.md)
 * [Установка i2p в Linux](install-i2p-linux.md)
 * [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
