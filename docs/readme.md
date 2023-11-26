@@ -1,4 +1,5 @@
 ## 2023.11
+* [Команда file в Linux](linux-file.md)
 * [Ссылки на файлы в Linux](linux-file-link.md)
 * [Vagrant 2: запуск проекта внутри Vagrant](vagrant02-work.md)
 * [Vagrant 1: Установка Vagrant и запуск виртуальной машины из локального образа](vagrant01-install.md)
