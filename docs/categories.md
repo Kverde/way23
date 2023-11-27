@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Команда wc в Linix](linux-command-wc.md)
 * [Команда file в Linux](linux-file.md)
 * [Ссылки на файлы в Linux](linux-file-link.md)
 * [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
