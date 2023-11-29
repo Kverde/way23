@@ -1,5 +1,5 @@
 ---
-title: "less и man в Linux"
+title: "less, man и help в Linux"
 date: "2023-11-09"
 categories:
   - "Linux"
@@ -9,6 +9,8 @@ tags:
 ---
 
 # {{ $frontmatter.title }}
+
+[[toc]]
 
 ## less
 
@@ -68,4 +70,12 @@ man 5 passwd
 
 ```
 man man
+```
+
+## help
+
+Некоторые команды, такие как `cd` не являются отдельными программа, а командами внутри bash. Для них нет страницы `man` и информацию по ним можно получить командой `help`.
+
+```bash
+help cd
 ```
