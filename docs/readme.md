@@ -1,4 +1,5 @@
 ## 2023.11
+* [Права на файлы и каталоги по умолчанию (umask)](linux-umask.md)
 * [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
 * [Утилита cut в Linux](linux-cut.md)
 * [Команда wc в Linix](linux-command-wc.md)

@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Права на файлы и каталоги по умолчанию (umask)](linux-umask.md)
 * [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
 * [Утилита cut в Linux](linux-cut.md)
 * [Команда wc в Linix](linux-command-wc.md)
