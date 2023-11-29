@@ -1,4 +1,5 @@
 ## 2023.11
+* [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
 * [Утилита cut в Linux](linux-cut.md)
 * [Команда wc в Linix](linux-command-wc.md)
 * [Команда file в Linux](linux-file.md)
