@@ -1,11 +1,11 @@
 ---
-title: "Создание и сжатие архивов в Linux: tar и zip"
+title: "Создание и сжатие архивов в Linux: tar и gzip"
 date: "2023-11-16"
 categories:
   - "Linux"
 tags:
   - "tar"
-  - "zip"
+  - "gzip"
 ---
 
 # {{ $frontmatter.title }}
