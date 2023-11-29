@@ -1,4 +1,5 @@
 ## 2023.11
+* [Утилита cut в Linux](templeate copy.md)
 * [Команда wc в Linix](linux-command-wc.md)
 * [Команда file в Linux](linux-file.md)
 * [Ссылки на файлы в Linux](linux-file-link.md)
@@ -14,7 +15,7 @@
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
 * [Установка прав на файлы в Linux с помощью chmod](linux-chmod.md)
 * [Владелец и группа файла в Linux](linux-chown-chgrp.md)
-* [less и man в Linux](less-man-linux.md)
+* [less, man и help в Linux](less-man-linux.md)
 * [Группы пользователей Linux в Debian](linux-user-group.md)
 * [Добавление пользователей в Debian](debian-adduser.md)
 * [Создание переодических заданий через cron в Linux](linux-cron.md)
