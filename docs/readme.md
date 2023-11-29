@@ -1,5 +1,5 @@
 ## 2023.11
-* [Утилита cut в Linux](templeate copy.md)
+* [Утилита cut в Linux](linux-cut.md)
 * [Команда wc в Linix](linux-command-wc.md)
 * [Команда file в Linux](linux-file.md)
 * [Ссылки на файлы в Linux](linux-file-link.md)
@@ -9,7 +9,7 @@
 * [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
 * [Создание дампа PostgreSQL](pg-dump.md)
 * [Копирование файлов по ssh и из контейнера Docker](copy-files-ssh-docker.md)
-* [Создание и сжатие архивов в Linux: tar и zip](linux-tar-zip.md)
+* [Создание и сжатие архивов в Linux: tar и gzip](linux-tar-zip.md)
 * [Права на директории в Linux](linux-chmod-directory.md)
 * [Переключение между пользователями через su и смена пароля пользователя](linux-su-passwd.md)
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
