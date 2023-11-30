@@ -64,6 +64,7 @@
 ## Linux
 * [Права на файлы и каталоги по умолчанию (umask)](linux-umask.md)
 * [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
+* [Поиск файлов в Linux (find)](linux-find.md)
 * [Утилита cut в Linux](linux-cut.md)
 * [Команда wc в Linix](linux-command-wc.md)
 * [Команда file в Linux](linux-file.md)
