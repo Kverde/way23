@@ -62,6 +62,8 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Программа strings в Linux](linux-strings.md)
+* [Команды sort и uniq в Linux](linux-sort-uniq.md)
 * [Права на файлы и каталоги по умолчанию (umask)](linux-umask.md)
 * [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
 * [Поиск файлов в Linux (find)](linux-find.md)

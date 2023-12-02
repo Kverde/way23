@@ -1,3 +1,7 @@
+## 2023.12
+* [Программа strings в Linux](linux-strings.md)
+* [Команды sort и uniq в Linux](linux-sort-uniq.md)
+
 ## 2023.11
 * [Права на файлы и каталоги по умолчанию (umask)](linux-umask.md)
 * [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
