@@ -64,6 +64,7 @@
 ## Linux
 * [Программа strings в Linux](linux-strings.md)
 * [Команды sort и uniq в Linux](linux-sort-uniq.md)
+* [Перевод процессов в фон и возвращение назад в Linux (jobs, fg)](linux-job-control.md)
 * [Права на файлы и каталоги по умолчанию (umask)](linux-umask.md)
 * [Передача пароля через консоль при подключении через ssh (sshpass)](linux-sshpass.md)
 * [Поиск файлов в Linux (find)](linux-find.md)
