@@ -5,6 +5,7 @@ categories:
   - "Linux"
 tags:
   - "less"
+  - "more"
   - "man"
 ---
 
