@@ -1,4 +1,6 @@
 ## 2023.12
+* [Команда tr в Linux](linux-tr.md)
+* [Команда diff в Linux](linix-diff.md)
 * [Программа strings в Linux](linux-strings.md)
 * [Команды sort и uniq в Linux](linux-sort-uniq.md)
 * [Перевод процессов в фон и возвращение назад в Linux (jobs, fg)](linux-job-control.md)
