@@ -1,4 +1,5 @@
 ## 2023.12
+* [Сравнение файлов в Linux (cmp)](linux-cmp.md)
 * [Команда timeout в Linux](linux-timeout.md)
 * [Просмотр размера файла в Linux (ls, du)](linux-file-size-du-ls.md)
 * [Команда tr в Linux](linux-tr.md)
