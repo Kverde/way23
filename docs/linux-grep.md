@@ -2,9 +2,9 @@
 title: "Команда grep в Linux"
 date: "2023-12-06"
 categories:
-  - "Блог"
+  - "Linux"
 tags:
-  - "way23"
+  - "grep"
 ---
 
 # {{ $frontmatter.title }}

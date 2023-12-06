@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Команда grep в Linux](linux-grep.md)
 * [Сравнение файлов в Linux (cmp)](linux-cmp.md)
 * [Команда timeout в Linux](linux-timeout.md)
 * [Просмотр размера файла в Linux (ls, du)](linux-file-size-du-ls.md)
@@ -157,7 +158,6 @@
 * [Установка плагина PostgreSQL в Dokku](установка-postgresql-в-dokku.md)
 
 ## Блог
-* [Команда grep в Linux](templeate copy.md)
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
 * [Flameshot — скриншоты в Linux](flameshot-ubuntu.md)
 * [Перенос блога с Wordpress на Vuepress](wordpress-to-vuepress.md)
