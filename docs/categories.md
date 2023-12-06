@@ -157,6 +157,7 @@
 * [Установка плагина PostgreSQL в Dokku](установка-postgresql-в-dokku.md)
 
 ## Блог
+* [Команда grep в Linux](templeate copy.md)
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
 * [Flameshot — скриншоты в Linux](flameshot-ubuntu.md)
 * [Перенос блога с Wordpress на Vuepress](wordpress-to-vuepress.md)
