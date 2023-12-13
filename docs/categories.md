@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Разметка диска в Linux с помощью fdisk](linux-fdisk.md)
 * [Команда grep в Linux](linux-grep.md)
 * [Сравнение файлов в Linux (cmp)](linux-cmp.md)
 * [Команда timeout в Linux](linux-timeout.md)
