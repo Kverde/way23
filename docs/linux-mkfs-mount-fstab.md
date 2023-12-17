@@ -1,5 +1,5 @@
 ---
-title: "Создание и монтирование файловой системы в Linux (mkfs, mount, blkid)"
+title: "Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab)"
 date: "2023-12-16"
 categories:
   - "Linux"
@@ -7,6 +7,7 @@ tags:
   - "mkfs"
   - "mount"
   - "blkid"
+  - "fstab"
 ---
 
 # {{ $frontmatter.title }}
@@ -209,3 +210,13 @@ total 0
 └──╼ $cat ./disk2/text.txt 
 hello
 ```
+
+Чтобы не монтировать файловую систему вручную, есть специальный файл `/etc/fstab`, который монтирует все перечисленные в нём файловые системы при запуске Linux.
+
+Добавим в него строку
+
+```txt
+UUID="9d9c2052-2317-4ffa-9001-719342a91218" /home/user/test/disk2  btrfs   defaults,noatime,nodiratime 0 2
+```
+
+После перезагрузки файловая систему будет сразу примонтирована.
