@@ -90,3 +90,29 @@ grep root -c < /etc/passwd
 ```
 cat /etc/passwd | grep user | head
 ```
+
+Кроме вышеуказанных перенаправлений ввода есть ещё две похожие команды управляющие потоками данных. Первая команда `<<<` позволяет передать на стандартный поток ввода строку текста.
+
+```bash
+user@debian-server:~/test$ cat file.txt 
+file.txt
+user@debian-server:~/test$ cat - file.txt <<< "stdin input"
+stdin input
+file.txt
+```
+
+Параметр `-` заставляет команду `cat` принимать ввод не только из файлов, но и из `stdin`.
+
+Команда `<<` делает тоже самое, но позволяет передать многострочные текст.
+
+```bash
+user@debian-server:~/test$ cat - file.txt << EOF
+> first line
+> second line
+> EOF
+first line
+second line
+file.txt
+```
+
+Вместо `EOF` можно использовать любой маркер начала и окончания ввода данных.
