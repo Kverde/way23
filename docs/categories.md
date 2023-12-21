@@ -62,7 +62,8 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
-* [Создание и монтирование файловой системы в Linux (mkfs, mount, blkid)](linux-mkfs-mount-fstab.md)
+* [Потоковый текстовый редактор sed](linux-sed.md)
+* [Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab)](linux-mkfs-mount-fstab.md)
 * [Разметка диска в Linux с помощью fdisk](linux-fdisk.md)
 * [Команда grep в Linux](linux-grep.md)
 * [Сравнение файлов в Linux (cmp)](linux-cmp.md)
