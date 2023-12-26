@@ -1,5 +1,5 @@
 ---
-title: "Справка по Linux (man, less, more, help и info)"
+title: "Справка по Linux (man, less, more, help, whatis и info)"
 date: "2023-11-09"
 categories:
   - "Linux"
@@ -9,6 +9,7 @@ tags:
   - "help"
   - "info"
   - "man"
+  - "whatis"
 ---
 
 # {{ $frontmatter.title }}
@@ -80,6 +81,10 @@ less file.txt
 Для поиска введите `\pattern`, где вместо `pattern` может быть любой текст и нажмите `Enter`. `n` — переход к следующему найденному фрагменту, `N` — переход к предыдущему.
 
 Существует схожая с `less` программа `more`. `more` содержит меньше функций, поэтому при наличии `less` можно всегда использовать `less`.
+
+## Команда whatis
+
+Команда `whatis` возвращает часть `man` — короткое однострочное описание.
 
 ## Команда help
 

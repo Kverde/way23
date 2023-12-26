@@ -1,4 +1,5 @@
 ## 2023.12
+* [Как определить откуда запускается команда в bash (type, which, whereis)](linux-type-which.md)
 * [Потоковый текстовый редактор sed](linux-sed.md)
 * [Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab)](linux-mkfs-mount-fstab.md)
 * [Разметка диска в Linux с помощью fdisk](linux-fdisk.md)
@@ -32,7 +33,7 @@
 * [Настройка облачного хранилища MEGA на сервере Debian без GUI](mega-cmd.md)
 * [Установка прав на файлы в Linux с помощью chmod](linux-chmod.md)
 * [Владелец и группа файла в Linux](linux-chown-chgrp.md)
-* [Справка по Linux (man, less, more, help и info)](less-man-linux.md)
+* [Справка по Linux (man, less, more, help, whatis и info)](less-man-linux.md)
 * [Группы пользователей Linux в Debian](linux-user-group.md)
 * [Добавление пользователей в Debian](debian-adduser.md)
 * [Создание переодических заданий через cron в Linux](linux-cron.md)
