@@ -1,4 +1,5 @@
 ## 2023.12
+* [Язык программирования awk](linux-awk.md)
 * [Как определить откуда запускается команда в bash (type, which, whereis)](linux-type-which.md)
 * [Потоковый текстовый редактор sed](linux-sed.md)
 * [Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab)](linux-mkfs-mount-fstab.md)
