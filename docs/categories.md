@@ -183,7 +183,6 @@
 * [Игра Super Markup Man](super-markup-man.md)
 
 ## Информационная безопасность
-* [Установка i2p в Linux](install-i2p-linux.md)
 * [Как добавить SSH ключ на сервер](add-ssh-key.md)
 * [Материалы по информационной безопасности](security-links.md)
 * [Криптоконтейнеры и облачные хранилища (VeraCrypt и Cryptomator)](crypto-cloud.md)
@@ -260,17 +259,10 @@
 * [Расширение Chrome: Don't Close Window With Last Tab](chrome-dont-close-window.md)
 * [Раскладка клавиатуры Strata для Markdown](раскладка-клавиатуры-strata.md)
 * [Настройка формата окончания строк в notepad++](notepad-new-line.md)
-* [Сокращения (abbreviations) в Pandoc](сокращения-abbreviations-в-pandoc.md)
-* [Установка Tor Browser](установка-tor-browser.md)
 * [Регистрация в element.io](регистрация-в-element-io.md)
-* [Шаблоны и переменные Pandoc](шаблоны-и-переменные-pandoc.md)
 * [Способы добавления метаданных в документ Pandoc](способы-добавления-метаданных-в-доку.md)
-* [Опции Pandoc: file-scope, preserve-tabs, tab-stop](опции-pandoc-file-scope-preserve-tabs-tab-stop.md)
-* [Отладка ошибок конвертации в Pandoc](отладка-ошибок-конвертации-в-pandoc.md)
-* [Основы Pandoc](основы-pandoc.md)
 * [f.lux — корректировка спектра экрана в зависимости от времени](f-lux-корректировка-спектра-экрана-в-зав.md)
 * [Редактирование горячих клавиш в Typora в Windows](редактирование-горячих-клавиш-в-typora-в-windows.md)
-* [Конвертация Markdown в doc через Pandoc с переопределением стилей](конвертация-markdown-в-doc-через-pandoc-с-переопредел.md)
 * [Синтаксис сокращений Emmet. Часть 2](синтаксис-сокращений-emmet-часть-2.md)
 * [Синтаксис сокращений Emmet. Часть 1](синтаксис-сокращений-emmet-часть-1.md)
 * [Установка плагина Emmet (Zen-codding) для Notepad++](установка-плагина-emmet-zen-codding-для-notepad.md)
@@ -364,13 +356,7 @@
 * [Работа с SVN через TortoiseSVN. 1. Выгрузка , фиксация, журнал](работа-с-svn-через-tortoisesvn-1-выгрузка-фиксация.md)
 
 ## Текстология
-* [Текстобзор: Смерека](textreview-smereka.md)
-* [Текстобзор: Project Gutenberg](textreview-gutenberg.md)
 * [Символы ударения акут и гравис](unicode-acute-grave.md)
-* [Текстобзор: Весь Толстой в один клик](textreview-tolstoy.md)
-* [Текстобзор: Истнет](textreview-istnet.md)
-* [Текстобзор](textreview.md)
-* [Технические аспекты цифровой текстологии](технические-аспекты-текстологии.md)
 
 ## Эсперанто
 * [Перевод речи Людвика Заменгофа на открытии первого съезда Эсперанто в 1905 году](перевод_речь_людвика_заменгофа_на_открытии_первого_съезда.md)
@@ -379,11 +365,3 @@
 * [Язык программирования awk](linux-awk.md)
 * [Обработка ошибок и проектирование компилятора](обработка-ошибок-и-проектирование-ко.md)
 * [Статические и динамические области видимости](статические-и-динамические-области-в.md)
-
-## текстология
-* [Текстобзор: ИнфоРост](textreview-inforost.md)
-* [Текстобзор: Vivaldi, DefView, БиблиоКербер, Notio](textreview-vivaldi.md)
-* [Текстобзор: Das Scharwerk](textreview-das-scharwerk.md)
-* [Текстобзор: Сократ Онлайн](textreview-sokrat-online.md)
-* [Текстобзор: Diglossa](textreview-diglossa.md)
-* [Текстобзор: Библиотека электронных ресурсов исторического факультета МГУ](textreview-mgu-library.md)

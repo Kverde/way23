@@ -27,7 +27,6 @@
 * [Ссылки на файлы в Linux](linux-file-link.md)
 * [Vagrant 2: запуск проекта внутри Vagrant](vagrant02-work.md)
 * [Vagrant 1: Установка Vagrant и запуск виртуальной машины из локального образа](vagrant01-install.md)
-* [Установка i2p в Linux](install-i2p-linux.md)
 * [Особые виды прав в Linux: SUID, SGID и Sticky bit](linux-suid-ssgid-sticky-bit.md)
 * [Создание дампа PostgreSQL](pg-dump.md)
 * [Копирование файлов по ssh и из контейнера Docker](copy-files-ssh-docker.md)
@@ -89,15 +88,6 @@
 
 ## 2022.10
 * [Философия, логика и мышление](philosophy-meaning.md)
-* [Текстобзор: ИнфоРост](textreview-inforost.md)
-* [Текстобзор: Vivaldi, DefView, БиблиоКербер, Notio](textreview-vivaldi.md)
-* [Текстобзор: Das Scharwerk](textreview-das-scharwerk.md)
-* [Текстобзор: Сократ Онлайн](textreview-sokrat-online.md)
-* [Текстобзор: Diglossa](textreview-diglossa.md)
-
-## 2022.09
-* [Текстобзор: Библиотека электронных ресурсов исторического факультета МГУ](textreview-mgu-library.md)
-* [Текстобзор: Смерека](textreview-smereka.md)
 
 ## 2022.08
 * [Редирект домена с https](domain-redirect.md)
@@ -125,7 +115,6 @@
 * [Установка Linux Kodachi](install-linux-kodachi.md)
 * [Google Takeout — сервис экспорта данных из Google](google-takeout.md)
 * [Раскладка клавиатуры Strata для Markdown](раскладка-клавиатуры-strata.md)
-* [Текстобзор: Project Gutenberg](textreview-gutenberg.md)
 
 ## 2022.02
 * [Предмет философии и основной вопрос философии](основной-вопрос-философии.md)
@@ -145,30 +134,20 @@
 
 ## 2021.09
 * [Как скопировать форматированный текст с caute.ru](copy-caute.md)
-* [Текстобзор: Весь Толстой в один клик](textreview-tolstoy.md)
-* [Текстобзор: Истнет](textreview-istnet.md)
-* [Текстобзор](textreview.md)
 * [Игра Super Markup Man](super-markup-man.md)
-* [Технические аспекты цифровой текстологии](технические-аспекты-текстологии.md)
 * [Перенос блога с Wordpress на Vuepress](wordpress-to-vuepress.md)
-* [Сокращения (abbreviations) в Pandoc](сокращения-abbreviations-в-pandoc.md)
 
 ## 2021.03
-* [Установка Tor Browser](установка-tor-browser.md)
 * [Регистрация в element.io](регистрация-в-element-io.md)
 
 ## 2021.01
-* [Шаблоны и переменные Pandoc](шаблоны-и-переменные-pandoc.md)
 * [Способы добавления метаданных в документ Pandoc](способы-добавления-метаданных-в-доку.md)
-* [Опции Pandoc: file-scope, preserve-tabs, tab-stop](опции-pandoc-file-scope-preserve-tabs-tab-stop.md)
 * [Объединение ячеек в таблицах VuePress](объединение-ячеек-в-таблицах-vuepress.md)
 * [Плагин VuePress для отображения формул vuepress-plugin-katex](плагин-vuepress-для-отображения-формул-vuepress-plugin-katex.md)
 * [Плагины VuePress back-to-top и reading-progress](плагины-vuepress-back-to-top-и-reading-progress.md)
 * [Добавляем favicon в VuePress](добавляем-favicon-в-vuepress.md)
-* [Отладка ошибок конвертации в Pandoc](отладка-ошибок-конвертации-в-pandoc.md)
 
 ## 2020.12
-* [Основы Pandoc](основы-pandoc.md)
 * [VuePress добавление кастомных стилей](vuepress-добавление-кастомных-стилей.md)
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 * [DevBooks. Обсуждение книг](devbooks-обсуждение-книг.md)
@@ -179,7 +158,6 @@
 
 ## 2020.07
 * [Редактирование горячих клавиш в Typora в Windows](редактирование-горячих-клавиш-в-typora-в-windows.md)
-* [Конвертация Markdown в doc через Pandoc с переопределением стилей](конвертация-markdown-в-doc-через-pandoc-с-переопредел.md)
 
 ## 2020.06
 * [Синтаксис сокращений Emmet. Часть 2](синтаксис-сокращений-emmet-часть-2.md)
