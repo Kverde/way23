@@ -60,6 +60,12 @@ sudo pluma /usr/share/X11/xkb/symbols/typo
     key <AD09> { [ NoSymbol,   NoSymbol,   leftdoublequotemark,   leftsinglequotemark ] }; // "o"
 ```
 
+Для того, чтобы было можно было быстро печатать символ `#` на любой раскладке измените строку
+
+```
+    key <AE03> { [ NoSymbol,   NoSymbol,         threesuperior,            numbersign ] }; // "3"
+```
+
 Теперь перезагрузите настройки XKB:
 
 ```
