@@ -1,4 +1,5 @@
 ## 2024.12
+* [Базы данных: EventStoreDB](db-eventstoredb.md)
 * [Базы данных: Redis](db-redis.md)
 
 ## 2024.04

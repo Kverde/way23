@@ -94,7 +94,7 @@ OK
 
 Пример использования библиотеки [redis-py](https://github.com/redis/redis-py):
 
-```
+```python
 import redis
 
 r = redis.Redis(host='redis-host', port=6379, decode_responses=True)
