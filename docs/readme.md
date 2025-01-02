@@ -1,3 +1,6 @@
+## 2025.01
+* [Базы данных: Prometheus](db-prometheus.md)
+
 ## 2024.12
 * [Базы данных: EventStoreDB](db-eventstoredb.md)
 * [Базы данных: Redis](db-redis.md)
