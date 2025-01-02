@@ -150,6 +150,7 @@
 
 ## Базы данных
 * [Базы данных: Prometheus](db-prometheus.md)
+* [Базы данных: Chroma](db-chroma.md)
 * [Базы данных: EventStoreDB](db-eventstoredb.md)
 * [Базы данных: Redis](db-redis.md)
 * [Создание дампа PostgreSQL](pg-dump.md)
