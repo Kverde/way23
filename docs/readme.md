@@ -1,4 +1,5 @@
 ## 2025.01
+* [Базы данных: MongoDB](db-mongodb.md)
 * [Базы данных: ElasticSearch](db-elasticsearch.md)
 * [Базы данных: Neo4j](db-neo4j.md)
 * [Базы данных: Prometheus](db-prometheus.md)
