@@ -71,7 +71,7 @@ mydb> db.users.find()
 
 ## Пример на Python
 
-Пример использования библиотеки [pymongo](https://github.com/mongodb/mongo-python-driver ([документация](https://pymongo.readthedocs.io/en/stable/))):
+Пример использования библиотеки [pymongo](https://github.com/mongodb/mongo-python-driver) ([документация](https://pymongo.readthedocs.io/en/stable/)):
 
 ```python
 from pymongo import MongoClient
