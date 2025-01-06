@@ -1,4 +1,5 @@
 ## 2025.01
+* [Базы данных: Apache Cassandra](db-cassandra.md)
 * [Базы данных: MongoDB](db-mongodb.md)
 * [Базы данных: ElasticSearch](db-elasticsearch.md)
 * [Базы данных: ClickHouse](db-clickhouse.md)

@@ -149,6 +149,7 @@
 * [Особенности операций целочисленного деления и взятия остатка при работе с отрицательными числами](особенности-операций-целочисленного.md)
 
 ## Базы данных
+* [Базы данных: Apache Cassandra](db-cassandra.md)
 * [Базы данных: MongoDB](db-mongodb.md)
 * [Базы данных: ElasticSearch](db-elasticsearch.md)
 * [Базы данных: ClickHouse](db-clickhouse.md)

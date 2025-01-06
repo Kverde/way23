@@ -10,7 +10,9 @@ tags:
 
 # {{ $frontmatter.title }}
 
-[ClickHouse](https://clickhouse.com) ([GitHub](https://github.com/ClickHouse/ClickHouse)) — колоночная база данных. ClickHouse используется для больших хранилищ данных для ускорения аналитических запросов. 
+[ClickHouse](https://clickhouse.com) ([GitHub](https://github.com/ClickHouse/ClickHouse)) — колоночная база данных. ClickHouse используется для больших хранилищ данных для ускорения аналитических запросов. ClickHouse направлен на OLAP.
+
+Для запросов ClickHouse использует свой язык похожий на SQL.
  
 ## Запуск
 
@@ -113,7 +115,7 @@ Query id: b9678529-dcd8-478f-92eb-406487b29094
 from clickhouse_driver import Client
 
 # Создаем подключение к ClickHouse
-client = Client('debian-server', port=9000)  # Замените 'localhost' на адрес вашего сервера ClickHouse
+client = Client('localhost', port=9000)  # Замените 'localhost' на адрес вашего сервера ClickHouse
 
 # Создаем таблицу (если она еще не существует)
 client.execute('''
@@ -156,3 +158,4 @@ client.disconnect()
 ## Ссылки
 
 * [Что нужно знать об архитектуре ClickHouse / Алексей Зателепин (Яндекс)](https://www.youtube.com/watch?v=PLMSA_gDdyM)
+* [005. Как работает ClickHouse, лекция в ШАД](https://www.youtube.com/watch?v=vbhSrZxm66E) — детально про алгоритмы и способ хранения данных
