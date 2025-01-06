@@ -151,6 +151,7 @@
 ## Базы данных
 * [Базы данных: MongoDB](db-mongodb.md)
 * [Базы данных: ElasticSearch](db-elasticsearch.md)
+* [Базы данных: ClickHouse](db-clickhouse.md)
 * [Базы данных: Blazegraph](db-blazegraph.md)
 * [Базы данных: Neo4j](db-neo4j.md)
 * [Базы данных: Prometheus](db-prometheus.md)
