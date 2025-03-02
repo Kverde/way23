@@ -1,3 +1,6 @@
+## 2025.03
+* [OCR через Tesseract на Linux](ocr-tesseract-linux.md)
+
 ## 2025.01
 * [Базы данных: Apache Cassandra](db-cassandra.md)
 * [Базы данных: MongoDB](db-mongodb.md)

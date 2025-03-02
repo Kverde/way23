@@ -255,6 +255,7 @@
 * [VirtualBox создание и настройка виртуальной машины](virtualbox-создание-и-настройка-виртуальной-м.md)
 
 ## Программы
+* [OCR через Tesseract на Linux](ocr-tesseract-linux.md)
 * [Vagrant 2: запуск проекта внутри Vagrant](vagrant02-work.md)
 * [Vagrant 1: Установка Vagrant и запуск виртуальной машины из локального образа](vagrant01-install.md)
 * [Использование CryptoPad вместо Google Docs](cryptopad-vs-googledocs.md)
