@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Базы данных: ClickHouse | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Базы данных: ClickHouse</h1><p><a href="https://clickhouse.com" target="_blank" rel="noopener noreferrer">ClickHouse<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> (<a href="https://github.com/ClickHouse/ClickHouse" target="_blank" rel="noopener noreferrer">GitHub<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>) — колоночная база данных. ClickHouse используется для больших хранилищ данных для ускорения аналитических запросов. ClickHouse направлен на OLAP.</p><p>Для запросов ClickHouse использует свой язык похожий на SQL.</p><h2 id="запуск" tabindex="-1"><a class="header-anchor" href="#запуск" aria-hidden="true">#</a> Запуск</h2><p>Запустить ClickHouse проще всего через <a href="https://hub.docker.com/r/clickhouse/clickhouse-server/" target="_blank" rel="noopener noreferrer">docker<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>docker run -d --name clickhouse-server <span class="token punctuation">\</span>
+  -p <span class="token number">8123</span>:8123 <span class="token punctuation">\</span>
+  -p <span class="token number">9000</span>:9000 <span class="token punctuation">\</span>
+  --ulimit <span class="token assign-left variable">nofile</span><span class="token operator">=</span><span class="token number">262144</span>:262144 <span class="token punctuation">\</span>
+  yandex/clickhouse-server
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="clickhouse-client" tabindex="-1"><a class="header-anchor" href="#clickhouse-client" aria-hidden="true">#</a> clickhouse-client</h2><p>ClickHouser предоставляет консольную программу для управления базой данных <a href="https://clickhouse.com/docs/en/integrations/sql-clients/cli" target="_blank" rel="noopener noreferrer">clickhouse-client<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>.</p><p>Для запуска в контейнере docker Наберите команду</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>docker <span class="token builtin class-name">exec</span> -it clickhouse-server clickhouse-client
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Пример работы. Создаём базу данных:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>b0e4b554a392 :) CREATE DATABASE IF NOT EXISTS newdb;
+
+CREATE DATABASE IF NOT EXISTS newdb
+
+Query id: 5b5867ab-ab57-4bd5-a902-78e7a1b75fd9
+
+Ok.
+
+0 rows in set. Elapsed: 0.023 sec. 
+
+b0e4b554a392 :) USE newdb;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>Подключается к базе данных:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>USE newdb
+
+Query id: 62ba7f5f-9479-4734-bad8-27b2563028fe
+
+Ok.
+
+0 rows in set. Elapsed: 0.003 sec.
+
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>Создаём таблицу в базе данных:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>b0e4b554a392 :) CREATE TABLE user (
+                    id UInt32,
+                    name String,
+                    created_at DateTime
+                ) ENGINE = MergeTree()
+                ORDER BY id;
+
+CREATE TABLE user
+(
+    `id` UInt32,
+    `name` String,
+    `created_at` DateTime
+)
+ENGINE = MergeTree
+ORDER BY id
+
+Query id: cd391f57-f554-4033-b733-aab58a3d2513
+
+Ok.
+
+0 rows in set. Elapsed: 0.029 sec. 
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>Выводим все таблицы в базе данных:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>b0e4b554a392 :) SHOW TABLES;
+
+SHOW TABLES
+
+Query id: b9678529-dcd8-478f-92eb-406487b29094
+
+┌─name─┐
+│ user │
+└──────┘
+
+1 rows in set. Elapsed: 0.009 sec.
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h2 id="пример-на-python" tabindex="-1"><a class="header-anchor" href="#пример-на-python" aria-hidden="true">#</a> Пример на Python</h2><p>Пример использования библиотеки <a href="https://github.com/mymarilyn/clickhouse-driver" target="_blank" rel="noopener noreferrer">clickhouse-driver<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> (<a href="https://clickhouse-driver.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">документация<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>):</p><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code><span class="token keyword">from</span> clickhouse_driver <span class="token keyword">import</span> Client
+
+<span class="token comment"># Создаем подключение к ClickHouse</span>
+client <span class="token operator">=</span> Client<span class="token punctuation">(</span><span class="token string">&#39;localhost&#39;</span><span class="token punctuation">,</span> port<span class="token operator">=</span><span class="token number">9000</span><span class="token punctuation">)</span>  <span class="token comment"># Замените &#39;localhost&#39; на адрес вашего сервера ClickHouse</span>
+
+<span class="token comment"># Создаем таблицу (если она еще не существует)</span>
+client<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token triple-quoted-string string">&#39;&#39;&#39;
+CREATE TABLE IF NOT EXISTS test_table (
+    id UInt32,
+    name String,
+    age UInt8
+) ENGINE = MergeTree()
+ORDER BY id
+&#39;&#39;&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Добавляем данные в таблицу</span>
+data <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&#39;Alice&#39;</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&#39;Bob&#39;</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&#39;Charlie&#39;</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+
+client<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">&#39;INSERT INTO test_table (id, name, age) VALUES&#39;</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+
+<span class="token comment"># Выбираем данные из таблицы</span>
+result <span class="token operator">=</span> client<span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token string">&#39;SELECT * FROM test_table&#39;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Выводим результаты</span>
+<span class="token keyword">for</span> row <span class="token keyword">in</span> result<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>row<span class="token punctuation">)</span>
+
+<span class="token comment"># Закрываем соединение (необязательно, так как клиент автоматически закрывает соединение при завершении работы)</span>
+client<span class="token punctuation">.</span>disconnect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br></div></div><p>Ввод программы:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>(1, &#39;Alice&#39;, 30)
+(2, &#39;Bob&#39;, 25)
+(3, &#39;Charlie&#39;, 35)
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="ссылки" tabindex="-1"><a class="header-anchor" href="#ссылки" aria-hidden="true">#</a> Ссылки</h2><ul><li><a href="https://www.youtube.com/watch?v=PLMSA_gDdyM" target="_blank" rel="noopener noreferrer">Что нужно знать об архитектуре ClickHouse / Алексей Зателепин (Яндекс)<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></li><li><a href="https://www.youtube.com/watch?v=vbhSrZxm66E" target="_blank" rel="noopener noreferrer">005. Как работает ClickHouse, лекция в ШАД<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> — детально про алгоритмы и способ хранения данных</li></ul><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">06.01.2025, 09:58:07</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

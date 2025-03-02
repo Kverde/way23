@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Фундаментальные принципы объектно ориентированного проектирования (Часть 1): Абстракция | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Фундаментальные принципы объектно ориентированного проектирования (Часть 1): Абстракция</h1><p>Вольный перевод статьи <a href="https://schellingerhout.github.io/design%20patterns/OODesign1/" target="_blank" rel="noopener noreferrer">Fundamental Object Oriented Design principles (Part 1): Abstraction<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></p><p>Рассмотрим принцип Абстракции используемый в объектно ориентированных языках программирования.</p><p>Это первая часть серии об объектно ориентированном проектировании. Для того чтобы понять почему изучение шаблонов проектирования важно, мы должны начать с рассмотрения того что такое хороший объектно ориентированный дизайн приложения.</p><p>ОО-языки предоставляют уникальные возможности, которые содействуют хорошему дизайну приложения. Рассматриваемые принципы проектирования могут быть применены и для не объектно ориентированных языков, но с большими сложностями.</p><p>Эта статья предполагает что вы знакомы как минимум с одним ОО языком программирования. C++, Delphi, C# и Java являются примерами объектно ориентированных языков. Настоящий ОО язык программирования имеет классы, объекты и очень часто интерфейсы.</p><h2 id="что-такое-абстракция" tabindex="-1"><a class="header-anchor" href="#что-такое-абстракция" aria-hidden="true">#</a> Что такое Абстракция?</h2><p>Абстракция, в общем смысле, означает оперирование кодом и структурой данных на высоком уровне, без необходимости понимания конкретной природы структуры данных. Ниже я опишу конкретные формы абстракции лежащие в основе ООП. Большинство из них должны быть знакомы вам, но я перечислю их в явной форме для того чтобы ссылаться на них из более сложных принципов проектирования в будущих постах.</p><h2 id="взаимодеиствие-с-объектами-используя-информацию-описанную-в-классе" tabindex="-1"><a class="header-anchor" href="#взаимодеиствие-с-объектами-используя-информацию-описанную-в-классе" aria-hidden="true">#</a> Взаимодействие с объектами используя информацию описанную в классе</h2><p>Объектно ориентированные языки программирования содержат концепцию классов. Класс — это определение, которое используется для создания объектов. Мы можем оперировать объектом через свойства и методы объявленные в классе, без понимания их действительной реализации. Также мы можем ожидать одинакового поведения от объектов одного и того же класса.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>var
+  LCircle: TCircle;
+  LArea: double;
+begin
+  LCircle := TCircle.Create; // Мы берём класс TCircle и создаём на основе него объект
+
+  // Мы можем устанавливать свойства в то время как объект будет сам обрабатывать побочные эффекты
+  LCircle.Radius := 3; 
+
+  // Мы можем вызывать высокоуровневые методы объекта
+  LCircle.Translate(10, 15);
+  LArea := LCircle.GetArea();
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>Пока никаких сюрпризов. Всё что нам нужно было определено в <code>TCircle</code> и мы знаем что мы можем использовать свойства и методы класса который мы использовали для создания объекта.</p><h2 id="взаимодеиствие-с-объектами-через-информацию-описанную-в-классе-предке" tabindex="-1"><a class="header-anchor" href="#взаимодеиствие-с-объектами-через-информацию-описанную-в-классе-предке" aria-hidden="true">#</a> Взаимодействие с объектами через информацию описанную в классе-предке</h2><p>Объектно ориентированные языки программирования позволяют наследовать классы. При правильно ОО проектировании классы потомки к предкам находятся в отношении &quot;является&quot;. Для примера мы можем наследовать классы <code>TLine</code> и <code>TArc</code> от класса <code>TCurve</code>. В этом примере предполагаем, что TCurve определяет тип линии (<code>LineType</code>).</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure SetLinetype(ACurveList: TList&lt;TCurve&gt;; ALineType: Linetype_Enum); // Linetype_Enum не определено в этом посте
+var
+  LCurve: TCurve;
+begin
+  for LCurve in ACurveList do
+    LCurve.LineType := ALineType;
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>В этом примере мы не беспокоимся о том содержит ли список линии (<code>TLine</code>) или дуги (<code>TArc</code>) или другие неизвестные типы. Нас волнует только чтобы объекты были типа <code>TCurve</code> (или его наследники). Но нам не нужно знать действительно ли <code>TCurve</code> сейчас является <code>TArc</code> или <code>TLine</code>.</p><h2 id="взаимодеиствие-с-объектом-используя-информацию-описанную-в-виртуальном-или-абстрактном-классе" tabindex="-1"><a class="header-anchor" href="#взаимодеиствие-с-объектом-используя-информацию-описанную-в-виртуальном-или-абстрактном-классе" aria-hidden="true">#</a> Взаимодействие с объектом используя информацию описанную в виртуальном (или абстрактном) классе</h2><p>Рассматривая класс <code>TCurve</code> мы можем представить что он может быть абстракцией любого количества типов, не только <code>TArc</code> и <code>TLine</code>. Например, у нас может класс <code>TSpline</code> или <code>TElipseArc</code> которые тоже относятся через отношение &quot;является&quot; классу <code>TCurve</code> как к предку. Если подумать о геометрической кривой в общем виде мы можем представить методы и свойства которые могут быть абстрагированы. Например, мы можем сказать &quot;кривая может иметь только одну точку начала и одну точку окончания&quot;, так что мы можем объявить функцию которая возвращает начальную точку и конечную точку.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+
+  TCurve = class
+  public
+    function GetStartPoint: TPoint; virtual; abstract;   // TPoint не определён в этом посте
+  end;
+
+  TArc = class(TCurve)
+  public
+    function GetStartPoint: TPoint; override; 
+  end;
+
+  TLine = class(TCurve)
+  public
+    function GetStartPoint: TPoint; override;
+  end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>Ключевое слово <strong>virtual</strong> в Delphi означает, что даже если мы вызовем этот метод в родительском типе (<code>TCurve</code>), то будет использоваться реализация наиболее специфичного класса (<code>TArc</code> или <code>TLine</code>). Потомки могут заменить реализацию на свою собственную. Мы рассмотрим это более подробно в концепции Полиморфизма в 3 части.</p><p>Для понимания давайте рассмотрим следующее</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>var
+  LCurve1, LCurve2, LCurve3: TCurve; // Все переменные объявлены с типом родителя
+  LStartPoint1, LStartPoint1, LStartPoint3: TPoint;  // TPoint не опредлён в этом посте
+begin
+  LCurve1 := nil;
+  LCurve2 := nil;
+  LCurve3 := nil;
+
+  try
+    LCurve1 := TArc.Create;  // Создаются объекты типов потомков, но присваиваются переменной с типом предка
+    LCurve2 := TLine.Create;
+    LCurve3 := TCurve.Create; // Допустимая инструкция, так как класс не помечен как абстрактный, абстрактный только отдельный метод
+
+    LStartPoint1 := LCurve1.GetStartPoint; // Будет вызван TArc.GetStartPoint
+    LStartPoint1 := LCurve2.GetStartPoint; // Будет вызван TLine.GetStartPoint
+    // LStartPoint3 := LCurve3.GetStartPoint; // Будет вызван an abstract error
+  finally
+    LCurve3.Free;
+    LCurve2.Free;
+    LCurve1.Free;
+ end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>При объявлении <code>GetStartPoint</code> в классе <code>TArc</code> мы использовали директиву <strong>override</strong>. Если затем мы ссылаемся на объект через переменную типа <code>TCurve</code> и вызываем <code>GetStartPoint</code> то будет вызван <code>TArc.GetStartPoint</code>. Ключевое слово <strong>abstract</strong> в Delphi означает что если мы вызовем <code>GetStartPoint</code> у потомка который не предоставляет реализацию то мы получим &quot;Abstract Error&quot;, эта ошибка означает что метод не был переопределён в потомках. Если мы уберём ключевое слово <strong>abstract</strong> то нам нужно обязательно добавить базовую реализацию на уровне класса <code>TCurve</code>. Если потомки не реализуют этот метод то будет вызываться базовая реализация без появления исключения.</p><p>Другой уровень абстракции - сделать весь класс абстрактным. Имеет смысл делать класс абстрактным если он настолько высоко в иерархии, что нет смысла создавать объекты этого класса. В данный момент проверки компилятара при создании объектов такого класса нет, но она может появится в будущих версиях.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>TCurve = class abstract
+public
+   function GetStartPoint: TPoint; virtual; abstract;
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="абстракция-через-интерфеисы" tabindex="-1"><a class="header-anchor" href="#абстракция-через-интерфеисы" aria-hidden="true">#</a> Абстракция через интерфейсы</h2><p>Существует заблуждение что интерфейсы это просто абстрактные классы. В случае классов между классом-потомком и классом-предком (включая абстрактные классы) существует отношение &quot;является&quot;. Наиболее распространённое отношение между классом и интерфейсом — &quot;поддерживает&quot;. Интерфейс может рассматриваться как контракт. Если класс поддерживает интерфейс, то класс берет на себя обязательство выполнить требования интерфейса, или делегировать их. Подробнее про делегирования интерфейсов будет в следующих статьях.</p><p>Интерфейсы даже более абстрактны чем абстрактные классы: один интерфейс может быть применён для нескольких иерархий классов одновременно. Можно даже создать свою иерархию наследования интерфейсов независящую от иерархии наследования классов к которым эти интерфейсы применяются. По сравнению с интерфейсами иерархии классов содержат структуры и функции которые трудно менять.</p><p>Рассмотрим пример который показывает отличия интерфейса от абстрактного класса.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>  IComparable = interface(IInterface)
+    function CompareTo(AObject: TObject): Integer;
+  end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>Очевидно что эта сущность не может войти не в одну конкретную иерархию классов. Этот интерфейс может быть применён к любому классу который потенциально можно сравнивать с другим классом. Фактически интерфейс <code>IComparable</code> должен применяется ко многим иерархиям классов. Применённый к классу интерфейс заставляет реализовать метод в классе. Мы же ссылаемся на этот метод на высоком уровне абстракции интерфейса. Ниже пример процедуры которая сортирует любой список объектов которые поддерживают интерфейс <code>IComparable</code>.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure SortComparableList(AList: TList&lt;IComparable&gt;);
+    procedure QuickSort(ALeftIdx, ARightIdx: Integer);
+    var
+      i, j : Integer;
+      LPivotItem: TObject;
+      LTempItem: IComparable;
+    begin
+      repeat
+        i := ALeftIdx;
+        j := ARightIdx;
+
+        LPivotItem := TObject(AList[(ALeftIdx + ARightIdx) shr 1]);
+
+        repeat
+          while AList[i].CompareTo(LPivotItem) &lt; 0 do
+            Inc(i);
+          while AList[j].CompareTo(LPivotItem) &gt; 0 do
+            Dec(j);
+          if i &lt;= j then
+          begin
+            if (i &lt;&gt; j) then
+            begin
+              LTempItem := Items[i];
+              Items[i] := Items[j];
+              Items[j] := LTempItem;
+            end;
+            Inc(i);
+            Dec(j);
+          end;
+        until i &gt; j;
+        if ALeftIdx &lt; j then
+          QuickSort(ALeftIdx, j);
+        ALeftIdx := i;
+      until i &gt;= ARightIdx;
+    end;
+
+begin
+  if AList.Count &gt; 1 then
+    QuickSort( 0, AList.Count - 1);
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br></div></div><h2 id="в-итоге" tabindex="-1"><a class="header-anchor" href="#в-итоге" aria-hidden="true">#</a> В итоге</h2><p>Абстракция позволяет нам фокусироваться только на той области кода которая важна для нас. Она позволяет нам обобщать функциональность повышая читаемость и упрощая повторное использование кода. Также она упрощает понимание того что происходит в программе на высоком уровне.</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">24.08.2023, 06:42:55</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

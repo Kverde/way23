@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Синтаксис сокращений Emmet. Часть 2 | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Синтаксис сокращений Emmet. Часть 2</h1><p>Продолжим рассматривать синтаксис сокращений Emmet.</p><h2 id="нумерация" tabindex="-1"><a class="header-anchor" href="#нумерация" aria-hidden="true">#</a> Нумерация</h2><p>Оператор умножения <code>*</code> создаёт повторяющиеся элементы, а спецсимвол <code>$</code> генерирует нумерацию. Поместите <code>$</code> в имя элемента или имя атрибута:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ul&gt;li.item$*5
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Несколько символов <code>$</code> добавляют лидирующие нули:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ul&gt;li.item$$*5
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+    &lt;li class=&quot;item001&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item002&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item003&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item004&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item005&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Для изменения направления нумерации (по возрастанию, по убыванию) и начального значения используйте оператор <code>@</code> после <code>$</code>. Порядок меняется символом минуса:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ul&gt;li.item$@-*5
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Начальное значение задаётся в формате <code>@n</code>:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ul&gt;li.item$@3*5
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item6&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item7&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Изменения порядка и начального значения работают вместе:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>ul&gt;li.item$@-3*5
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;ul&gt;
+    &lt;li class=&quot;item7&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item6&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="текст" tabindex="-1"><a class="header-anchor" href="#текст" aria-hidden="true">#</a> Текст</h2><p>Для добавления текста используйте фигурные скобки <code>{}</code>:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>a{Click me}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;a href=&quot;&quot;&gt;Click me&lt;/a&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Emmet рассматривает <code>{text}</code> как отдельный элемент, но с особым значением, если он идёт сразу после другого элемента. Например, <code>a{click}</code> и <code>a&gt;{click}</code> генерируют одинаковый код, а <code>a{click}+b{here}</code> и <code>a&gt;{click}+b{here}</code> разный:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;!-- a{click}+b{here} --&gt;
+&lt;a href=&quot;&quot;&gt;click&lt;/a&gt;&lt;b&gt;here&lt;/b&gt;
+
+&lt;!-- a&gt;{click}+b{here} --&gt;
+&lt;a href=&quot;&quot;&gt;click&lt;b&gt;here&lt;/b&gt;&lt;/a&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Во втором примере элемент <code>&lt;b&gt;</code> располагается внутри элемента <code>&lt;a&gt;</code>. И это и есть отличие: если <code>{text}</code> располагается сразу за элементом, то контекст не меняется, несмотря на то что текст помещается внутрь элемента. Боле сложный пример:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>p&gt;{Click }+a{here}+{ to continue}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;p&gt;Click &lt;a href=&quot;&quot;&gt;here&lt;/a&gt; to continue&lt;/p&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>В этом примере, для того чтобы поместить <code>Click</code> внутрь <code>&lt;p&gt;</code> в явном виде применен оператор <code>&gt;</code> поэтому и все последующие элементы так же располагаются внутри <code>&lt;p&gt;</code>.</p><p>Для примера, то же сокращение без оператора <code>&gt;</code>:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>p{Click }+a{here}+{ to continue}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;p&gt;Click &lt;/p&gt;
+&lt;a href=&quot;&quot;&gt;here&lt;/a&gt; to continue
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="советы" tabindex="-1"><a class="header-anchor" href="#советы" aria-hidden="true">#</a> Советы</h2><p>Сокращения не могут содержать пробелы, следующее сокращение не сработает:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>(header &gt; ul.nav &gt; li*5) + footer
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Сокращения не обязательно должны начинаться с новой строки, вы можете писать сокращения в любом месте текста.</p><p>Сокращения это не язык шаблонов, читаемость не всегда важна, важнее скорость их печати.</p><p>Не стремитесь написать одно большое сокращение для всего кода, эффективнее использовать несколько небольших сокращений, чем одно крупное. Небольшие сокращения быстрее написать и в них сложнее допустить ошибку.</p><h2 id="неявные-имена-тегов" tabindex="-1"><a class="header-anchor" href="#неявные-имена-тегов" aria-hidden="true">#</a> Неявные имена тегов</h2><p>В некоторых случаях, вместо введения полного имени тега вы можете пропустить имя тега, а Emmet вставит его исходя из контекста. Например, вместо <code>div.content</code> введите <code>.content</code> и это сокращение будет заменено на <code>&lt;div class=&quot;content&quot;&gt;&lt;/div&gt;</code>.</p><p>Рассмотрим пример</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;body&gt;
+    &lt;div&gt;
+        .item01
+    &lt;/div&gt;
+
+    &lt;span&gt;.item02&lt;/span&gt;
+
+    &lt;ul class=&quot;nav&quot;&gt;
+        .item03
+    &lt;/ul&gt;
+&lt;/body&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>Исходя из контекста, <code>.item01</code> будет преобразован в элемент <code>div</code>, <code>.item02</code> в элемент <code>span</code>, а <code>.item03</code> в элемент <code>li</code>.</p><p>Ниже список имен тегов для которых это работает, в зависимости от родительских тегов:</p><ul><li><code>li</code> для <code>ul</code> и <code>ol</code></li><li><code>tr</code> для <code>table</code>, <code>tbody</code>, <code>thead</code> и <code>tfoot</code></li><li><code>td</code> для <code>tr</code></li><li><code>option</code> для <code>select</code> и <code>optgroup</code></li></ul><p>Следующие сокращения с явными и не явными именами эквивалентны</p><table><thead><tr><th>Без имён</th><th>Заданные имена</th></tr></thead><tbody><tr><td><code>.wrap&gt;.content</code></td><td><code>div.wrap&gt;div.content</code></td></tr><tr><td><code>em&gt;.info</code></td><td><code>em&gt;span.info</code></td></tr><tr><td><code>ul&gt;.item*3</code></td><td><code>ul&gt;li.item*3</code></td></tr><tr><td><code>table&gt;#row$*4&gt;[colspan=2]</code></td><td><code>table&gt;tr#row$*4&gt;td[colspan=2]</code></td></tr></tbody></table><h2 id="генератор-«lorem-ipsum»" tabindex="-1"><a class="header-anchor" href="#генератор-«lorem-ipsum»" aria-hidden="true">#</a> Генератор «Lorem Ipsum»</h2><p>Для генерации случайного текста используйте сокращения <code>lorem</code> или <code>lipsum</code>. По умолчанию текст состоит из 30 слов. Количество слов меняется цифрой после сокращения, например, <code>lorem100</code>.</p><p>Пример сгенерированного текста:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, nemo, et, minima ea libero architecto similique repellendus deleniti impedit amet fugiat eaque a? Natus, provident dicta harum voluptate voluptatibus nulla.
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Сокращения для генерации текста работают совместно с оператором умножения:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>p*4&gt;lorem5
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>Результат:</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>&lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+&lt;p&gt;Libero, quos veniam dolores dolor.&lt;/p&gt;
+&lt;p&gt;Perferendis, quia suscipit est cumque.&lt;/p&gt;
+&lt;p&gt;Ratione, accusantium, modi. Quidem, perspiciatis!&lt;/p&gt;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="ссылки" tabindex="-1"><a class="header-anchor" href="#ссылки" aria-hidden="true">#</a> Ссылки</h2><ul><li><a href="https://docs.emmet.io/" target="_blank" rel="noopener noreferrer">Документация Emmet<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>.</li></ul><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">24.08.2023, 06:42:55</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

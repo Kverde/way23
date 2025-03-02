@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Преобразование типов значений Null и Unassigned типа Variant в Delphi | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Преобразование типов значений Null и Unassigned типа Variant в Delphi</h1><h2 id="конвертация-unassigned" tabindex="-1"><a class="header-anchor" href="#конвертация-unassigned" aria-hidden="true">#</a> Конвертация Unassigned</h2><p>Если переменная с типом <code>Variant</code> не инициализирована то она имеет значение <code>Unassigned</code>, даже если это поле класса:</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+  TMyClass = class
+    FVar: Variant;
+  end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  Obj: TMyClass;
+  Flag: Boolean;
+begin
+  Obj := TMyClass.Create;
+  try
+    Flag := Obj.FVar = Unassigned;
+
+    ShowMessage(BoolToStr(Flag, True)); // True
+  finally
+    FreeAndNil(Obj);
+  end;
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>Возможны следующие случаи преобразования <code>Unassigned</code> в другие типы данных:</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button1Click(Sender: TObject);
+var
+  v: Variant;
+  i: Integer;
+  s: string;
+  b: Boolean;
+  d: TDateTime;
+begin
+  i := v; // 0
+  s := v; // пустая строка
+  b := v; // False
+  d := v; // 30.12.1899
+
+  ShowMessage(IntToStr(i));
+  ShowMessage(s);
+  ShowMessage(BoolToStr(b, True));
+  ShowMessage(DateTimeToStr(d));
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>Значение <code>Unassigned</code> нужно иметь в виду при работе с <code>Variant</code>. Но с практической точки зрения более интересно поведение в случае значения <code>null</code>. Например, он часто встречается при получении значения из поля датасета (<code>TField</code>) через свойство <code>Value</code>.</p><h2 id="конвертация-null" tabindex="-1"><a class="header-anchor" href="#конвертация-null" aria-hidden="true">#</a> Конвертация Null</h2><p>Конвертация <code>null</code> зависит от значения логической глобальной переменной <code>System.Variants.NullStrictConvert</code>. Её значение по умолчанию равно <code>True</code> и при попытке конвертации <code>null</code> появляется исключение <code>EVariantTypeCastError</code>. Если же значение <code>NullStrictConvert</code> равно <code>False</code>, то по умолчанию <code>null</code> преобразуется аналогично <code>Unassigned</code>.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button1Click(Sender: TObject);
+var
+  v: Variant;
+  i: Integer;
+  s: string;
+  b: Boolean;
+  d: TDateTime;
+begin
+  NullStrictConvert := False;
+
+  v := null;
+  i := v; // 0
+  s := v; // пустая строка
+  b := v; // False
+  d := v; // 30.12.1899
+
+  ShowMessage(IntToStr(i));
+  ShowMessage(s);
+  ShowMessage(BoolToStr(b, True));
+  ShowMessage(DateTimeToStr(d));
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>Есть особенность для типа <code>String</code>. Можно задать какой строке будет равен <code>null</code>. Например</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button2Click(Sender: TObject);
+var
+  v: Variant;
+  s: string;
+begin
+  NullStrictConvert := False;
+  NullAsStringValue := &#39;my_null&#39;;
+
+  v := null;
+  s := v; 
+
+  ShowMessage(s); // my_null
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="выражения" tabindex="-1"><a class="header-anchor" href="#выражения" aria-hidden="true">#</a> Выражения</h2><p>Если <code>null</code> участвует в выражении то результат выражения будет <code>null</code>.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button2Click(Sender: TObject);
+var
+  v: Variant;
+  s: string;
+begin
+  NullStrictConvert := False;
+  NullAsStringValue := &#39;null&#39;;
+
+  v := null + 2;
+  s := v;
+
+  ShowMessage(s); // null
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>Ситуация с <code>Unassigned</code> интереснее. Вероятно, срабатывает такое же преобразование как при конвертации, в данном примере к 0. Описания в документации нет.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button2Click(Sender: TObject);
+var
+  v: Variant;
+  s: string;
+begin
+  v := v + 2;
+  s := v;
+
+  ShowMessage(s); // 2
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="сравнения" tabindex="-1"><a class="header-anchor" href="#сравнения" aria-hidden="true">#</a> Сравнения</h2><p>Поведение <code>null</code> при сравнении зависит от глобальных переменных <code>NullEqualityRule</code> и <code>NullMagnitudeRule</code>.</p><p><code>NullEqualityRule</code> определяет результат операторов &quot;=&quot; и &quot;&lt;&gt;&quot; (равно и не равно). У этой переменной возможны три значения</p><ul><li><code>ncrError</code> — сравнение с <code>null</code> вызывает исключение</li><li><code>ncrStrict</code> — результат сравнение с <code>null</code> всегда равен <code>False</code></li><li><code>ncrLoose</code> (по умолчанию) — <code>null</code> равен другому <code>null</code> и не равен другим значениям</li></ul><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button1Click(Sender: TObject);
+var
+  v: Variant;
+  flag: Boolean;
+begin
+  v := null;
+  flag := v = null;
+
+  ShowMessage(BoolToStr(flag, True)); // True 
+end;
+
+procedure TForm1.Button2Click(Sender: TObject);
+var
+  v: Variant;
+  flag: Boolean;
+begin
+  NullEqualityRule := ncrStrict;
+  v := null;
+  flag := v = null;
+
+  ShowMessage(BoolToStr(flag, True)); // False 
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  v: Variant;
+  flag: Boolean;
+begin
+  NullEqualityRule := ncrError;
+  v := null;
+  flag := v = null; // Исключение EVariantInvalidNullOpError
+
+  ShowMessage(BoolToStr(flag, True));
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p><code>NullMagnitudeRule</code> определяет результат операторов &quot;&lt;&quot; и &quot;&gt;&quot; (больше и меньше). Значения этой переменной аналогичны <code>NullEqualityRule</code></p><ul><li><code>ncrError</code> — сравнение с <code>null</code> вызывает исключение</li><li><code>ncrStrict</code> — результат сравнение с <code>null</code> всегда равен <code>False</code></li><li><code>ncrLoose</code> (по умолчанию) — <code>null</code> считается меньше любого другого значения</li></ul><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button2Click(Sender: TObject);
+var
+  v: Variant;
+  flag: Boolean;
+begin
+  v := null;
+  flag := v &lt; -1;
+
+  ShowMessage(BoolToStr(flag, True)); // True
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>Интересный случай сравнения null с null</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TForm1.Button2Click(Sender: TObject);
+var
+  v: Variant;
+  flag: Boolean;
+begin
+  v := null;
+  flag := v &lt; null;
+
+  ShowMessage(BoolToStr(flag, True)); // False
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="выводы" tabindex="-1"><a class="header-anchor" href="#выводы" aria-hidden="true">#</a> Выводы</h2><ul><li>Переменные типа <code>Variant</code> нужно всегда инициализировать, даже если они являются переменным класса, чтобы не сталкиваться с <code>Unassigned</code>.</li><li>Во всех случаях при работе с <code>Variant</code> нужно учитывать <code>null</code>.</li><li>Менять или не менять значение по умолчанию переменной <code>NullStrictConvert</code> вопрос открытый.</li></ul><h2 id="ссылки" tabindex="-1"><a class="header-anchor" href="#ссылки" aria-hidden="true">#</a> Ссылки</h2><ul><li><a href="http://docwiki.embarcadero.com/RADStudio/Rio/en/Variant_Types_(Delphi)" target="_blank" rel="noopener noreferrer">Документация<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> по типу Variant.</li></ul><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">24.08.2023, 06:42:55</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

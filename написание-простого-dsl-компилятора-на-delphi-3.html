@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Написание простого DSL компилятора на Delphi (3. Токинезатор) | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Написание простого DSL компилятора на Delphi (3. Токинезатор)</h1><p>Перевод поста [Writing a Simple DSL Compiler with Delphi (3. Tokenizer])](<a href="https://www.thedelphigeek.com/2017/09/writing-simple-dsl-compiler-with-delphi.html" target="_blank" rel="noopener noreferrer">https://www.thedelphigeek.com/2017/09/writing-simple-dsl-compiler-with-delphi.html<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>).</p><p>Эта статья представляет собой описание токинезатора используемого для представления &quot;Языка&quot;. Если вы только начинаете читать эту серию, то я бы рекомендовал вам начать с <a href="http://way23.ru/%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B3%D0%BE-dsl-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0-%D0%BD%D0%B0-delphi-0/" target="_blank" rel="noopener noreferrer">этого поста<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>.</p><p>Пожалуйста, имейте в виду, что эта статья описывает начальную реализацию токинезатора. Если вы хотите просматривать код во время чтения статьи, убедитесь, что вы переключились на ветку <a href="https://github.com/gabr42/SimpleDSLCompiler/tree/dsl_v1" target="_blank" rel="noopener noreferrer">dsl_v1<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>.</p><p>С этой статьёй я перемещаюсь в важную часть проекта — код который читает исходный код и превращает его в красивое абстрактное синтаксическое дерево. Другими словами, я буду говорить о парсере.</p><p>Я должен признать что потратил на парсер так мало времени, как мог. В конце концов, моя основная цель конвертировать AST в запускаемый код, не разбор текста. Тем не менее, нельзя написать компилятор без написания парсера.</p><p>Если вы хотите сделать что-то с данными, то вы должны</p><ol><li>Знать формат в котором они записаны.</li><li>Написать код который читает входной поток, разбирает его и создаёт в памяти структуры наполненные данными.</li></ol><p>Первая задача любого хорошего программиста это создание библиотеки которая будет делать самую трудную работу за него. Так было незадолго до того как такие инструменты появились в области написания компиляторов.</p><p>Программисты очень скоро поняли что анализ текста в действительности состоит из двух шагов. На первом шаге вы хотите разделить данныйе на токены (лексемы). Каждый токен представляет собой небольшую часть входных данных имеющую определённое значение. Например, если вы разделите оператор Паскаля</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>a := func(i+42);
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>на отдельные токены, то вы получите</p><ul><li>identifier:a</li><li>whitespace</li><li>becomes</li><li>whitespace</li><li>identifier:func</li><li>left-parent</li><li>identifier:i</li><li>plus</li><li>number:42</li><li>right-parent</li><li>semicolon</li></ul><p>Некоторые символы сразу сопоставляются с собственными токенами, например, &quot;;&quot; становится <code>semicolon</code>. А некоторые сгруппированы, например, &quot;42&quot; становится <code>number</code> со значением 42.</p><p>Вторая часть — парсер использует последовательность токенов производимых токинезатором и пробует понять смысл (семантику) — то есть как токены вписываются в формальную спецификацию языка. Это будет тема следующей статьи.</p><p>Из-за такого разделения вспомогательные утилиты тоже делятся на две области — одни помогают создавать токинезаторы а другие парсеры. В терминах Unix, например, у нас есть Lex для лексического анализа (токинезация) и Yacc (Yet Another Compiler Compiler) для семантического анализа. В мире Паскаля у нас тоже есть инструменты для генерации компиляторов. Существует довольно приличный <a href="https://github.com/RomanYankovsky/ndyacclex" target="_blank" rel="noopener noreferrer">порт на Delphi<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>, <a href="http://wiki.freepascal.org/Plex_and_Pyacc" target="_blank" rel="noopener noreferrer">Plex+Pyacc<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> для FreePascal, довольно старый и неподдерживаемый (но бесплатный) <a href="http://www.soft-gems.net/index.php/tools/delphi-compiler-generator" target="_blank" rel="noopener noreferrer">Delphi Compiler Generator<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a> и возможно несколько других инструментов, которых я не нашёл при поверхностным поиске.</p><p>Вернёмся назад к теме разговора.</p><p>В моём случае язык крайне простой и следовательно токинезатор тоже. Вместо использования специализированных инструментов я просто пошёл дальше и написал его. Как вы уведите, это очень просто.</p><h2 id="токены" tabindex="-1"><a class="header-anchor" href="#токены" aria-hidden="true">#</a> Токены</h2><p>Рассмотрим демонстрационную программу из <a href="http://way23.ru/%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B3%D0%BE-dsl-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%B0-%D0%BD%D0%B0-delphi-1/" target="_blank" rel="noopener noreferrer">первой части<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></p><div class="language-c ext-c line-numbers-mode"><pre class="language-c"><code><span class="token function">fib</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> i <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">fib</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Из этого примера мы можем угадать все токены используемые в Языке</p><ul><li>identifier (&quot;fib&quot;, &quot;i&quot;, &quot;if&quot;, &quot;return&quot; ...)</li><li>number (&quot;1&quot;, &quot;2&quot;, &quot;3&quot;)</li><li>whitespace</li><li>left parenthesis (&quot;(&quot;)</li><li>right parenthesis (&quot;)&quot;)</li><li>left curly bracket (&quot;{&quot;)</li><li>right curly bracket (&quot;}&quot;)</li><li>less than (&quot;&lt;&quot;)</li><li>plus (&quot;+&quot;)</li><li>minus (&quot;-&quot;)</li></ul><p>Есть только два токена которые не покрывает этот пример</p><ul><li>comma (&quot;,&quot;)</li><li>semicolon (&quot;;&quot;)</li></ul><p>Первый используется для разделения параметров в определении функции и при вызове функции. Второй используется для разделения операторов, но не появляется в этом примере, так как является необязательным непосредственно перед закрывающей фигурной скобкой.</p><p>Следующий тип из модуля <code>SimpleDSL.Compiler.Tokenizer</code> перечисляет все варианты. В дополнение к уже обсуждённым типам токенов используются:</p><ul><li><code>tkUnknown</code> для представления неожиданных входных данных.</li><li><code>tkEOF</code> как сигнал что достигнут конец входного потока.</li></ul><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+  TTokenKind = (tkUnknown, tkWhitespace,
+                tkIdent, tkNumber,
+                tkLeftParen, tkRightParen, tkLeftCurly, tkRightCurly,
+                tkLessThan, tkPlus, tkMinus,
+                tkComma, tkSemicolon,
+
+                tkEOF);
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="интерфеис" tabindex="-1"><a class="header-anchor" href="#интерфеис" aria-hidden="true">#</a> Интерфейс</h2><p>Токинезатор доступен через очень простой интерфейс</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>ISimpleDSLTokenizer = interface
+  function  CurrentLocation: TPoint;
+  function  GetToken(var kind: TTokenKind; var identifier: string): boolean;
+  procedure Initialize(const code: string);
+  function  IsAtEnd: boolean;
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>Очень важная функция <code>GetToken</code>. Она возвращает следующий токен из входного потока — <code>kind</code> содержит тип токена и <code>identifier</code> содержит последовательность символов представляющих токен. Функция возвращает <code>False</code> когда достигнут конец входного потока.</p><p>Другие функции вспомогательные.</p><ul><li><code>IsAtEnd</code> возвращает <code>True</code> когда достигнут конец входного потока.</li><li><code>CurrentLocation</code> возвращает текущую строку и номер символа, это удобно для сообщений об ошибках.</li><li><code>Initialize</code> — инициализирует токинизатор.</li></ul><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TSimpleDSLTokenizer.Initialize(const code: string);
+begin
+  FProgram.Text := code;
+  FNextLine := 0;
+  FNextChar := 1;
+  FLookahead := #0;
+  FLastLine := FProgram.Count - 1;
+  if FLastLine &gt;= 0 then begin
+    FLastLineLen := Length(FProgram[FLastLine]);
+    FCurrentLine := FProgram[FNextLine];
+  end;
+
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>Программа хранится внутри <code>TStringList</code> <code>FProgram</code>. Другие переменные отслеживают текущее положение и чаще используются в методе <code>GetChar</code>.</p><h2 id="чтение-входного-потока" tabindex="-1"><a class="header-anchor" href="#чтение-входного-потока" aria-hidden="true">#</a> Чтение входного потока</h2><p>Давайте взглянем на метод <code>GetToken</code>.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>function TSimpleDSLTokenizer.GetToken(var kind: TTokenKind; var identifier: string): boolean;
+var
+  ch: char;
+begin
+  identifier := &#39;&#39;;
+  Result := GetChar(ch);
+  if not Result then begin
+    kind := tkEOF;
+    Exit;
+  end;
+  case ch of
+    &#39;(&#39;: kind := tkLeftParen;
+    &#39;)&#39;: kind := tkRightParen;
+    &#39;{&#39;: kind := tkLeftCurly;
+    &#39;}&#39;: kind := tkRightCurly;
+    &#39;+&#39;: kind := tkPlus;
+    &#39;-&#39;: kind := tkMinus;
+    &#39;&lt;&#39;: kind := tkLessThan;
+    &#39;,&#39;: kind := tkComma;
+    &#39;;&#39;: kind := tkSemicolon;
+    else if ch.IsLetter then begin
+      kind := tkIdent;
+      identifier := ch + GetIdent;
+    end
+    else if CharInSet(ch, [&#39;0&#39;..&#39;9&#39;]) then begin
+      kind := tkNumber;
+      identifier := ch + GetNumber;
+    end
+    else if ch.IsWhiteSpace then begin
+      kind := tkWhitespace;
+      SkipWhitespace;
+    end
+    else
+      kind := tkUnknown;
+  end;
+
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br></div></div><p>Сначала он считывает следующий символ из потока (через <code>GetChar</code>) и завершается если следующего символа нет. Затем обрабатывает все односимвольные токены сразу. После этого идет обработка особых случаев — чтение идентификаторов, строк, и пробелов через методы <code>GetIdent</code>, <code>GetNumber</code> и <code>SkipWhitespace</code> соответственно.</p><p><code>GetIdent</code> и <code>GetNumber</code> очень похожи, так что я сфокусируюсь на одном из них.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>function TSimpleDSLTokenizer.GetIdent: string;
+var
+  ch: char;
+begin
+  Result := &#39;&#39;;
+  while GetChar(ch) do begin
+    if ch.IsLetter or ch.IsNumber or (ch = &#39;_&#39;) then
+      Result := Result + ch
+    else begin
+      PushBack(ch);
+      Exit;
+    end;
+  end;
+
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>Так как <code>GetToken</code> уже прочитал первый символ идентификатора, то <code>GetIdent</code> собирает вместе все следующие символы которые являются либо буквой, либо цифрой, либо символом подчёркивания. (и как вы можете видеть, код использует хелперы для типа <code>Char</code> - <code>IsLetter</code> и <code>IsNumber</code> — так что идентификаторы действительно поддерживают Юникод)</p><p>Когда появляется неподходящий для идентификатора символ, простейшее решение это просто сказать &quot;Оп, я прочитал слишком много, пожалуйста помести этот последний символ обратно для обработки&quot;.</p><h2 id="одно-символьныи-буфер" tabindex="-1"><a class="header-anchor" href="#одно-символьныи-буфер" aria-hidden="true">#</a> Одно-символьный буфер</h2><p>Раз мы только что прочитали на один символ больше, эта операция &quot;пожалуйста, верни последний <code>GetChar</code>&quot; обрабатывается простым одно-символьным буфером используемым в <code>PushBack</code> и в <code>GetChar</code>.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>procedure TSimpleDSLTokenizer.PushBack(ch: char);
+begin
+  Assert(FLookahead = #0, &#39;TSimpleDSLTokenizer: Lookahead buffer is not empty&#39;);
+  FLookahead := ch;
+end;
+
+function TSimpleDSLTokenizer.GetChar(var ch: char): boolean;
+begin
+  if FLookahead &lt;&gt; #0 then begin
+    ch := FLookahead;
+    FLookahead := #0;
+    Result := true;
+  end
+  else begin
+    Result := not IsAtEnd;
+    if Result then begin
+      ch := FCurrentLine[FNextChar];
+      Inc(FNextChar);
+      if FNextChar &gt; Length(FCurrentLine) then begin
+        Inc(FNextLine);
+        if FNextLine &lt; FProgram.Count then
+          FCurrentLine := FProgram[FNextLine];
+        FNextChar := 1;
+      end;
+    end;
+  end;
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p><code>PushBack</code> просто сохраняет текущий буфер в <code>FLookahead</code> (если буфер не пуст, что может произойти только если в токенизере баг). <code>GetChar</code> содержит немного больше работы — в дополнение к обработке буфера <code>FLookahead</code> он должен также обрабатывать условие окончания строки текста.</p><p>Подход <em>PushBack</em> используется также в <code>GetNumber</code> и в <code>SkipWhitespace</code> (для деталей смотрите код) и в парсере, как мы скоро увидим.</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">24.08.2023, 06:42:55</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab) | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab)</h1><p>После <a href="/linux-fdisk.html" class="">разметки диска</a>, на разделах нужно создать файловую систему. Сделать это можно программой <code>mkfs</code>. в систему добавлен диск <code>sdb</code> с двумя разделами: <code>sdb1</code> и <code>sdb2</code>.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">fdisk</span> -l
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> password <span class="token keyword">for</span> user: 
+
+
+Disk /dev/sdb: <span class="token number">1</span> GiB, <span class="token number">1073741824</span> bytes, <span class="token number">2097152</span> sectors
+Disk model: VBOX HARDDISK   
+Units: sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+Disklabel type: gpt
+Disk identifier: 298E01AB-6142-C446-AB5B-EF5AF4D7D40D
+
+Device      Start     End Sectors  Size Type
+/dev/sdb1    <span class="token number">2048</span>  <span class="token number">821247</span>  <span class="token number">819200</span>  400M Linux filesystem
+/dev/sdb2  <span class="token number">821248</span> <span class="token number">2097118</span> <span class="token number">1275871</span>  623M Linux filesystem
+
+
+Disk /dev/sda: <span class="token number">30</span> GiB, <span class="token number">32212254720</span> bytes, <span class="token number">62914560</span> sectors
+Disk model: VBOX HARDDISK   
+Units: sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+Disklabel type: dos
+Disk identifier: 0x5bfff3f8
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/sda1  *     <span class="token number">2048</span> <span class="token number">62910539</span> <span class="token number">62908492</span>  30G <span class="token number">83</span> Linux
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>Для создания файловой системы в команду <code>mkfs</code> нужно передать тип файловой системы (параметр <code>-t</code>) и путь к разделу. Создадим на двух разделах две разные файловые системы: <code>ext4</code> и</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>✗<span class="token punctuation">]</span>─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">mkfs</span> -t ext4 /dev/sdb1
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> password <span class="token keyword">for</span> user: 
+<span class="token function">mke2fs</span> <span class="token number">1.46</span>.6 <span class="token punctuation">(</span><span class="token number">1</span>-Feb-2023<span class="token punctuation">)</span>
+Creating filesystem with <span class="token number">409600</span> 1k blocks and <span class="token number">102400</span> inodes
+Filesystem UUID: a6411a93-7813-4431-9203-f53209211e96
+Superblock backups stored on blocks: 
+	<span class="token number">8193</span>, <span class="token number">24577</span>, <span class="token number">40961</span>, <span class="token number">57345</span>, <span class="token number">73729</span>, <span class="token number">204801</span>, <span class="token number">221185</span>, <span class="token number">401409</span>
+
+Allocating group tables: <span class="token keyword">done</span>                            
+Writing inode tables: <span class="token keyword">done</span>                            
+Creating journal <span class="token punctuation">(</span><span class="token number">8192</span> blocks<span class="token punctuation">)</span>: <span class="token keyword">done</span>
+Writing superblocks and filesystem accounting information: <span class="token keyword">done</span> 
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>└──╼ <span class="token variable">$sudo</span> <span class="token function">mkfs</span> -t btrfs /dev/sdb2
+btrfs-progs v6.1.3 
+See http://btrfs.wiki.kernel.org <span class="token keyword">for</span> <span class="token function">more</span> information.
+
+NOTE: several default settings have changed <span class="token keyword">in</span> version <span class="token number">5.15</span>, please <span class="token function">make</span> sure
+      this does not affect your deployments:
+      - DUP <span class="token keyword">for</span> metadata <span class="token punctuation">(</span>-m dup<span class="token punctuation">)</span>
+      - enabled no-holes <span class="token punctuation">(</span>-O no-holes<span class="token punctuation">)</span>
+      - enabled free-space-tree <span class="token punctuation">(</span>-R free-space-tree<span class="token punctuation">)</span>
+
+Label:              <span class="token punctuation">(</span>null<span class="token punctuation">)</span>
+UUID:               9d9c2052-2317-4ffa-9001-719342a91218
+Node size:          <span class="token number">16384</span>
+Sector size:        <span class="token number">4096</span>
+Filesystem size:    <span class="token number">622</span>.98MiB
+Block group profiles:
+  Data:             single            <span class="token number">8</span>.00MiB
+  Metadata:         DUP              <span class="token number">32</span>.00MiB
+  System:           DUP               <span class="token number">8</span>.00MiB
+SSD detected:       no
+Zoned device:       no
+Incompat features:  extref, skinny-metadata, no-holes
+Runtime features:   free-space-tree
+Checksum:           crc32c
+Number of devices:  <span class="token number">1</span>
+Devices:
+   ID        SIZE  <span class="token environment constant">PATH</span>
+    <span class="token number">1</span>   <span class="token number">622</span>.98MiB  /dev/sdb2
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>Вывод информации при создании разных файловых систем различается. В двух случаях команда возвращает UUID — уникальный идентификатор файловой системы. По нему можно ссылаться на файловый системе вместе пути к разделу вроде <code>/dev/sdb1</code>, так как этот путь зависит от порядка инициализации устройств и может изменится, а идентификатор файловой системы записан на диске и не меняется.</p><p>Создадим два каталога.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$mkdir</span> disk1 disk2
+┌─<span class="token punctuation">[</span>✗<span class="token punctuation">]</span>─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$ls</span> -l
+total <span class="token number">0</span>
+drwxr-xr-x <span class="token number">1</span> user user <span class="token number">0</span> Dec <span class="token number">16</span> 08:44 disk1
+drwxr-xr-x <span class="token number">1</span> user user <span class="token number">0</span> Dec <span class="token number">16</span> 08:44 disk2
+
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>Теперь примонтируем две файловые системы, одну с помощью пути к диску, а вторую с указанием UUID файловой системы. Команда <code>mount</code> монтирует файловую систему, первый параметр — раздел, второй — точка монтирования файловой системы.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">mount</span> /dev/sdb1 ./disk1
+┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">mount</span> <span class="token assign-left variable">UUID</span><span class="token operator">=</span>9d9c2052-2317-4ffa-9001-719342a91218 ./disk2
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>Параметры каталогов теперь изменились, у них стал другой владелец и группа:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>✗<span class="token punctuation">]</span>─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$ls</span> -l
+total <span class="token number">17</span>
+drwxr-xr-x <span class="token number">3</span> root root <span class="token number">1024</span> Dec <span class="token number">16</span> 08:37 disk1
+drwxr-xr-x <span class="token number">1</span> root root    <span class="token number">0</span> Dec <span class="token number">16</span> 08:39 disk2
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Команда <code>mount</code> без параметров выводит список примонтированных файловых систем.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$mount</span> <span class="token operator">|</span> <span class="token function">grep</span> /sdb
+/dev/sdb1 on /home/user/test/disk1 <span class="token builtin class-name">type</span> ext4 <span class="token punctuation">(</span>rw,relatime<span class="token punctuation">)</span>
+/dev/sdb2 on /home/user/test/disk2 <span class="token builtin class-name">type</span> btrfs <span class="token punctuation">(</span>rw,relatime,space_cache<span class="token operator">=</span>v2,subvolid<span class="token operator">=</span><span class="token number">5</span>,subvol<span class="token operator">=</span>/<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>В выводе команды присутствуют:</p><ol><li>Примонтированное устройство (раздел диска)</li><li>Точка монтирования</li><li>Тип файловой системы</li><li>Параметры монтирования</li></ol><p>Идентификаторы файловых систем так же можно посмотреть командой <code>blkid</code>:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$blkid</span>
+/dev/sda1: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;3b8dda7f-a34a-40b6-bc8b-d90d2087258b&quot;</span> <span class="token assign-left variable">UUID_SUB</span><span class="token operator">=</span><span class="token string">&quot;bf469f0b-dc85-4689-8612-8960300d1402&quot;</span> <span class="token assign-left variable">BLOCK_SIZE</span><span class="token operator">=</span><span class="token string">&quot;4096&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;btrfs&quot;</span> <span class="token assign-left variable">PARTUUID</span><span class="token operator">=</span><span class="token string">&quot;5bfff3f8-01&quot;</span>
+/dev/sdb1: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;a6411a93-7813-4431-9203-f53209211e96&quot;</span> <span class="token assign-left variable">BLOCK_SIZE</span><span class="token operator">=</span><span class="token string">&quot;1024&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;ext4&quot;</span> <span class="token assign-left variable">PARTUUID</span><span class="token operator">=</span><span class="token string">&quot;64e9d72b-4c96-ab44-ba49-78f5df5d3b94&quot;</span>
+/dev/sdb2: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;9d9c2052-2317-4ffa-9001-719342a91218&quot;</span> <span class="token assign-left variable">UUID_SUB</span><span class="token operator">=</span><span class="token string">&quot;6a24be71-65e3-4207-92f6-6d47736422e0&quot;</span> <span class="token assign-left variable">BLOCK_SIZE</span><span class="token operator">=</span><span class="token string">&quot;4096&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;btrfs&quot;</span> <span class="token assign-left variable">PARTUUID</span><span class="token operator">=</span><span class="token string">&quot;9ed5870c-444d-7146-8623-8c99d2015cdb&quot;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Если попытаться записать файл в примонтированный диск, то окажется, что у пользователя недостаточно прав.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$cd</span> disk2
+┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test/disk2<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$touch</span> file.txt
+touch: cannot <span class="token function">touch</span> <span class="token string">&#39;file.txt&#39;</span><span class="token builtin class-name">:</span> Permission denied
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Это можно исправить изменив владельца точки монтирования.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test/disk2<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$cd</span> <span class="token punctuation">..</span>
+┌─<span class="token punctuation">[</span>✗<span class="token punctuation">]</span>─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">chown</span> user ./disk2
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>Теперь прав достаточно:</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$echo</span> hello <span class="token operator">&gt;</span> ./disk2/text.txt
+┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$ls</span> -l ./disk2
+total <span class="token number">4</span>
+-rw-r--r-- <span class="token number">1</span> user user <span class="token number">6</span> Dec <span class="token number">16</span> 09:27 text.txt
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>Размонтируем диск. В команде <code>umount</code> можно указать диск или точку монтирования.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">umount</span> ./disk2
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>Теперь файл пропал из каталога.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$ls</span> -l ./disk2
+total <span class="token number">0</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>Примонтируем снова и файл снова будет на месте.</p><div class="language-bash ext-sh line-numbers-mode"><pre class="language-bash"><code>┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$sudo</span> <span class="token function">mount</span> /dev/sdb2 ./disk2
+┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~/test<span class="token punctuation">]</span>
+└──╼ <span class="token variable">$cat</span> ./disk2/text.txt 
+hello
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>Чтобы не монтировать файловую систему вручную, есть специальный файл <code>/etc/fstab</code>, который монтирует все перечисленные в нём файловые системы при запуске Linux.</p><p>Добавим в него строку</p><div class="language-txt ext-txt line-numbers-mode"><pre class="language-txt"><code>UUID=&quot;9d9c2052-2317-4ffa-9001-719342a91218&quot; /home/user/test/disk2  btrfs   defaults,noatime,nodiratime 0 2
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>После перезагрузки файловая систему будет сразу примонтирована.</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">17.12.2023, 09:55:27</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

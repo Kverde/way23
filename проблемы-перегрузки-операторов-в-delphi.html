@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Проблемы перегрузки операторов в Delphi | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Проблемы перегрузки операторов в Delphi</h1><p>Вольный перевод поста <a href="https://sergworks.wordpress.com/2013/04/10/on-the-operator-overloading-in-delphi/" target="_blank" rel="noopener noreferrer">On the operator overloading in Delphi<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>.</p><p>Перегрузка операторов в Delphi является простой если запись не содержит в себе полей-ссылок на объекты в куче. Чтобы проиллюстрировать эту проблему рассмотрим следующий (некорректный!) пример:</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>program DelphiDemo;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils;
+
+type
+  Adder = record
+  private
+    FRef: PInteger;
+    function GetMemory: Integer;
+    procedure SetMemory(AValue: Integer);
+  public
+    procedure Init(AValue: Integer = 0);
+    procedure Done;
+    class operator Add(const A, B: Adder): Adder;
+    property Memory: Integer read GetMemory write SetMemory;
+  end;
+
+{ Adder }
+
+class operator Adder.Add(const A, B: Adder): Adder;
+begin
+// !!! Утечка памяти
+  New(Result.FRef);
+  Result.Memory:= A.Memory + B.Memory;
+end;
+
+procedure Adder.Done;
+begin
+  Dispose(FRef);
+end;
+
+function Adder.GetMemory: Integer;
+begin
+  Result:= FRef^;
+end;
+
+procedure Adder.Init(AValue: Integer);
+begin
+  New(FRef);
+  FRef^:= AValue;
+end;
+
+procedure Adder.SetMemory(AValue: Integer);
+begin
+  FRef^:= AValue;
+end;
+
+procedure Test;
+var
+  A, B, C: Adder;
+
+begin
+  A.Init(1);
+  B.Init(2);
+  C.Init();
+  C := A + B;
+  Writeln(C.Memory);
+  C.Done;
+  B.Done;
+  A.Done;
+end;
+
+begin
+  ReportMemoryLeaksOnShutdown:= True;
+  try
+    Test;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, &#39;: &#39;, E.Message);
+  end;
+  ReadLn;
+end.
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br></div></div><p>Строка <code>#59 (C:= A + B)</code> работает следующим образом:</p><ul><li>Временная запись <code>Result</code> помещается в стек</li><li>Временная запись заполняется суммой <code>A + B</code> (метод <code>Adder.Add</code>)</li><li>Временная запись присваивается (поверхностным копированием) переменной <code>C</code></li><li>Временная запись убирается со стека</li></ul><p>Код работает правильно если <code>Adder</code> не содержит ссылок на кучу, <code>FRef</code> в экземпляре <code>Adder</code> делает ситуацию более сложной. Вы должны всегда инициализировать поле <code>FRef</code> для каждого экземпляра <code>Adder</code>, но вы не можете финализировать временную запись которая создана на строке <code>#59</code>. (также не можете финализировать запись которая инициализируется в строке <code>#58</code> и теряется в строке <code>#59</code>).</p><p>Единственный путь исправить утечку памяти — закомпостировать строку <code>#58</code>, но это не будет работать в более сложных случаях, например, когда переменная должна участвовать в выражении справа.</p><p>Правильное решение использует автоматическое управление памятью вместо простых указателей. Ниже решение использующее интерфейс:</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>program DelphiDemo2;
+
+{$APPTYPE CONSOLE}
+
+uses
+  SysUtils, Classes;
+
+type
+  IAdder = interface
+    function GetMemory: Integer;
+    procedure SetMemory(AValue: Integer);
+  end;
+
+  TAdderRef = class(TInterfacedObject, IAdder)
+  private
+    FMemory: Integer;
+    function GetMemory: Integer;
+    procedure SetMemory(AValue: Integer);
+  end;
+
+  Adder = record
+  private
+    FRef: IAdder;
+    function GetMemory: Integer;
+    procedure SetMemory(AValue: Integer);
+  public
+    procedure Init(AValue: Integer = 0);
+    procedure Done;
+    class operator Add(const A, B: Adder): Adder;
+    property Memory: Integer read GetMemory write SetMemory;
+  end;
+
+{ TAdderRef }
+
+function TAdderRef.GetMemory: Integer;
+begin
+  Result:= FMemory;
+end;
+
+procedure TAdderRef.SetMemory(AValue: Integer);
+begin
+  FMemory:= AValue;
+end;
+
+{ Adder }
+
+class operator Adder.Add(const A, B: Adder): Adder;
+begin
+  Result.FRef:= TAdderRef.Create;
+  Result.Memory:= A.Memory + B.Memory;
+end;
+
+procedure Adder.Init(AValue: Integer);
+begin
+  FRef:= TAdderRef.Create;
+  FRef.SetMemory(AValue);
+end;
+
+procedure Adder.Done;
+begin
+  FRef:= nil;
+end;
+
+function Adder.GetMemory: Integer;
+begin
+  Result:= FRef.GetMemory;
+end;
+
+procedure Adder.SetMemory(AValue: Integer);
+begin
+  FRef.SetMemory(AValue);
+end;
+
+procedure Test;
+var
+  A, B, C: Adder;
+
+begin
+  A.Init(1);
+  B.Init(2);
+//  C.Init();
+  C:= A + B;
+  Writeln(C.Memory);
+//  C.Done;
+//  B.Done;
+//  A.Done;
+end;
+
+begin
+  ReportMemoryLeaksOnShutdown:= True;
+  try
+    Test;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, &#39;: &#39;, E.Message);
+  end;
+  ReadLn;
+end.
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br></div></div><p>Полезный побочный эффект при таком подходе в том что вам не нужно инициализировать или финализировать поле <code>FRef</code> вручную (но вы можете это делать). Несколько строк в процедуре <code>Test</code>, показанной выше, закомментированы потому, что они больше не нужны, но они могут быть раскомментированы и код продолжит верно работать — автоматическое управление памятью для интерфейсов обеспечит это.</p><p>Очень интересно знать как обсуждаемая проблема решается в C++. Стандартный C++ подход полностью отличается — он требует перегрузки оператора присваивания (возможность, которую Delphi не поддерживает) и написания конструктора копирования (другая концепция отсутствующая в Delphi). Я планирую обсудить это позже.</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">24.08.2023, 06:42:55</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>

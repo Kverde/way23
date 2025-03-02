@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.24">
+    <meta name="theme-color" content="#ffffff"><meta name="yandex-verification" content="bbf10c47bf8b55fb"><link rel="icon" href="/assets/favicons/favicon.svg"><link rel="mask-icon" href="/assets/favicons/mask-icon.svg" color="red"><link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png"><link rel="manifest" href="manifest.json"><script>
+	    var __rm__config = {
+        projectId: '-Mibn7-xoaevC6Q4qq9f',
+        locale: 'ru',
+        contextWidget: 0,
+        embedBtn: 0,
+        floatingBtn: 1,
+        floatingBtnPosition: 'left',
+        floatingBtnStyle: 'light',
+			};
+    </script><script src="https://widget.revisionme.com/app.js" defer="defer" id="rm_app_script"></script><title>Автоматическое создание объектных полей с помощью RTTI в Delphi | Way23</title><meta name="description" content="Блог о программировании">
+    <link rel="preload" href="/assets/js/runtime~app.25176522.js" as="script"><link rel="preload" href="/assets/css/styles.1005c642.css" as="style"><link rel="preload" href="/assets/js/1812.ebb0a1a7.js" as="script"><link rel="preload" href="/assets/js/app.b6198e79.js" as="script">
+    <link rel="stylesheet" href="/assets/css/styles.1005c642.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container no-sidebar"><header class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/" class=""><!----><span class="site-name">Way23</span></a></span><div class="navbar-links-wrapper" style=""><!--[--><!--]--><nav class="navbar-links can-hide"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><div class="sidebar-mask"></div><aside class="sidebar"><nav class="navbar-links"><!--[--><div class="navbar-links-item"><a href="/" class="nav-link" aria-label="Главная"><!--[--><!--]--> Главная <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/categories.md" class="nav-link" aria-label="По категориям"><!--[--><!--]--> По категориям <!--[--><!--]--></a></div><div class="navbar-links-item"><a href="/contacts.md" class="nav-link" aria-label="Контакты"><!--[--><!--]--> Контакты <!--[--><!--]--></a></div><!--]--></nav><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="frontmatter-title" tabindex="-1"><a class="header-anchor" href="#frontmatter-title" aria-hidden="true">#</a> Автоматическое создание объектных полей с помощью RTTI в Delphi</h1><p>Вольный перевод поста <a href="https://www.thedelphigeek.com/2012/10/automagically-creating-object-fields.html" target="_blank" rel="noopener noreferrer">Automagically Creating Object Fields with RTTI<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a></p><p>На работе возникла задача создания иерархии классов, причём классы почти не содержали реализации, только объявление классов, с одним исключением — каждый класс отвечал за создание и уничтожение внутренних объектов. Я задумался, может быть, я могу использовать атрибуты и RTTI чтобы реализовать это поведение в одном месте, вместо того чтобы реализовывать в каждом классе.</p><h2 id="проблема" tabindex="-1"><a class="header-anchor" href="#проблема" aria-hidden="true">#</a> Проблема</h2><p>Мне нужны классы следующего вида</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+  TObjectB = class
+    FData1: integer;
+    FData2: string;
+    FData3: boolean;
+  end; 
+
+  TObjectA = class
+  strict private
+    FObjectB: TObjectB;
+  public
+    constructor Create;
+    destructor Destroy; override;
+  end;
+
+{ TObjectA }
+
+constructor TObjectA.Create;
+begin
+  inherited Create;
+  FObjectB := TObjectB.Create;
+end;
+
+destructor TObjectA.Destroy;
+begin
+  FreeAndNil(FObjectB);
+  inherited;
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>Но я слишком ленив чтобы писать в каждом классе раз примерно одинаковый конструктор и деструктор. Что мне делать?</p><h2 id="результат" tabindex="-1"><a class="header-anchor" href="#результат" aria-hidden="true">#</a> Результат</h2><p>Используя надлежащую инфраструктуру, код выше может быть переписан следующим образом</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+  TObjectB = class
+    FData1: integer;
+    FData2: string;
+    FData3: boolean;
+  end;
+
+  TObjectA = class(TGpManaged)
+  strict private
+    [GpManaged]
+    FObjectB: TObjectB;
+  end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>Вся реализация скрыта в классе <code>TGpManaged</code>, который описан ниже. Он реализован в модуле <a href="https://github.com/gabr42/GpDelphiUnits/blob/master/src/GpAutoCreate.pas" target="_blank" rel="noopener noreferrer">GpAutoCreate<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>, который является частью моего open-source проекта <a href="https://github.com/gabr42/GpDelphiUnits" target="_blank" rel="noopener noreferrer">GpDelphiUnits<span><svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" ariahidden="true" focusable="false" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><!--[--><span class="sr-only">open in new window</span><!--]--></span></a>, вместе с тестовой программой <code>TestGpAutoCreate</code>.</p><h2 id="решение" tabindex="-1"><a class="header-anchor" href="#решение" aria-hidden="true">#</a> Решение</h2><p>Класс <code>TGpManaged</code> реализует только конструктор и деструктор. Конструктор автоматически создаёт поля в классах-потомках, а деструктор автоматически уничтожает их.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+  TGpManaged = class
+  public
+    constructor Create;
+    destructor  Destroy; override;
+  end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>Не всегда хорошая идея автоматически создавать и уничтожать все поля. Поля, управление которыми будет проходить в автоматическом режиме, должны быть помечены атрибутом <code>[GpManaged]</code>, который реализован в этом же модуле.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>type
+  GpManagedAttribute = class(TCustomAttribute)
+  public type
+    TConstructorType = (ctNoParam, ctParBoolean);
+   strict private
+    FBoolParam      : boolean;
+    FConstructorType: TConstructorType;
+  public
+    class function  IsManaged(const obj: TRttiNamedObject): boolean; static;
+    class function GetAttr(const obj: TRttiNamedObject;
+      var ma: GpManagedAttribute): boolean; static;
+    constructor Create; overload;
+    constructor Create(boolParam: boolean); overload;
+    property BoolParam: boolean read FBoolParam;
+    property ConstructorType: TConstructorType read FConstructorType;
+  end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>Атрибут может быть указан в двух формах:</p><p>Первая форма <code>[GpManaged]</code> которая будет вызывать конструктор без параметров для создания объекта помеченного атрибутом.</p><p>Вторая форма <code>[GpManaged(false)]</code> или <code>[GpManaged(true)]</code> которая будет вызывать конструктор с одним параметром с типом Boolean для создания объекта помеченного атрибутом.</p><p>Поддержка конструкторов с другими типами параметров может быть добавлена в дальнейшем.</p><p>Вторая форма с параметром конструктора была добавлена специально для создания <code>TObjectList</code>. Вызывая <code>TObjectList.Create</code> будет создан список объектов, который будет отвечать за их уничтожение. Это удобно в большинстве случаев. Тем не менее, если вы хотите чтобы список не отвечал за уничтожение объектов вы можете создать его следующим образом</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>  [GpManaged(false)]
+  FList2: TObjectList;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>Более детально реализацию <code>GpManagedAttribute</code> вы можете посмотреть в исходном коде.</p><h2 id="создание-объектов" tabindex="-1"><a class="header-anchor" href="#создание-объектов" aria-hidden="true">#</a> Создание объектов</h2><p>Поля помеченные любой версией атрибута <code>[GpManaged]</code> создаются в конструкторе <code>TGpManaged.Create</code>.</p><p>Код сначала обращается к расширенному контексту RTTI и ищет информацию об объекте который создаётся (<code>ctx.GetType(Self.ClassType)</code>). Потом происходит перебор всех полей объявленный в этом объекте.</p><p>Для каждого поля проверяется помечено ли оно атрибутом <code>[GpManaged]</code>. Если поле не отмечено то происходит переход к следующему полю.</p><p>Если же поле помечено <code>[GpManaged]</code>, то происходит цикл по всем методам с именем <code>Create</code> (я намеренно отказался от поддержки конструкторов с другими именами). Для каждого найденного метода происходит проверка, содержит ли он соответствующее число параметров и их типы.</p><p>Если соответствие найдено то используется <code>ctor.Invoke(f.FieldType.AsInstance.MetaclassType)</code> для вызова найденного конструктора. Подходящие параметры конструктора передаются вторым аргументом <code>Invoke</code>. Результат вызова конструктора помещается поле методом <code>f.SetValue</code>.</p><p>Затем вся процедура повторяется для следующего поля.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>constructor TGpManaged.Create;
+var
+  ctor  : TRttiMethod;
+  ctx   : TRttiContext;
+  f     : TRttiField;
+  ma    : GpManagedAttribute;
+  params: TArray&lt;TRttiParameter&gt;;
+  t     : TRttiType;
+begin
+  ctx := TRttiContext.Create;
+  t := ctx.GetType(Self.ClassType);
+  for f in t.GetFields do begin
+    if not GpManagedAttribute.GetAttr(f, ma) then
+      continue; //for f
+    for ctor in f.FieldType.GetMethods(&#39;Create&#39;) do begin
+      if ctor.IsConstructor then begin
+        params := ctor.GetParameters;
+        if (ma.ConstructorType = GpManagedAttribute.TConstructorType.ctNoParam) and
+           (Length(params) = 0) then
+        begin
+          f.SetValue(Self, ctor.Invoke(f.FieldType.AsInstance.MetaclassType, []));
+          break; //for ctor
+        end
+        else 
+        if (ma.ConstructorType = 
+             GpManagedAttribute.TConstructorType.ctParBoolean) and
+           (Length(params) = 1) and
+           (params[0].ParamType.TypeKind = tkEnumeration) and
+           SameText(params[0].paramtype.name, &#39;Boolean&#39;) then
+        begin
+          f.SetValue(Self, 
+            ctor.Invoke(f.FieldType.AsInstance.MetaclassType, [ma.BoolParam]));
+          break; //for ctor
+        end;
+      end;
+    end; //for ctor
+  end; //for f
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h2 id="уничтожение-полеи" tabindex="-1"><a class="header-anchor" href="#уничтожение-полеи" aria-hidden="true">#</a> Уничтожение полей</h2><p>Поля очищаются похожим образом, только взамен конструктора вызывается деструктор <code>Destroy</code>. Код проще потому что не требуется проверять каком именно деструктор вызывать.</p><div class="language-delphi ext-delphi line-numbers-mode"><pre class="language-delphi"><code>destructor TGpManaged.Destroy;
+var
+  ctx : TRttiContext;
+  dtor: TRttiMethod;
+  f   : TRttiField;
+  t   : TRttiType;
+begin
+  ctx := TRttiContext.Create;
+  t := ctx.GetType(Self.ClassType);
+  for f in t.GetFields do begin
+    if not GpManagedAttribute.IsManaged(f) then
+      continue; //for f
+    for dtor in f.FieldType.GetMethods(&#39;Destroy&#39;) do begin
+      if dtor.IsDestructor then begin
+        dtor.Invoke(f.GetValue(Self), []);
+        f.SetValue(Self, nil);
+        break; //for dtor
+      end;
+    end; //for dtor
+  end; //for f
+end;
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="потенциальные-проблемы" tabindex="-1"><a class="header-anchor" href="#потенциальные-проблемы" aria-hidden="true">#</a> Потенциальные проблемы</h2><p>Вы должны всегда помнить что этот подход намного медленней чем создание объектов обычным образом. Я не делал тестов, но не буду удивлён если автоматическое создание объектов медленнее в 100 раз. Тем не менее, скорость достаточная для управления объектами которые редко создаются и уничтожаются.</p><p>Другая проблема заключается в том, что вы должны изменить предок своих классов на <code>TGpManaged</code>. Если это не подходит для вашей ситуации, но вы всё равно хотите использовать автоматическое управление жизненным циклом объектов, то вы должны скопировать мой код в ваши базовые классы.</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Последниее изменение: </span><span class="meta-item-info">24.08.2023, 06:42:55</span></div><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script src="/assets/js/runtime~app.25176522.js" defer></script><script src="/assets/js/1812.ebb0a1a7.js" defer></script><script src="/assets/js/app.b6198e79.js" defer></script>
+  </body>
+</html>
