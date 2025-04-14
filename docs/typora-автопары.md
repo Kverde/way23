@@ -12,7 +12,7 @@ tags:
 
 Перевод страницы документации Typora [Auto Pair](http://support.typora.io/Auto-Pair/).
 
-![Typora настройки автопар](images/typora_ap_00.png)
+![Typora настройки автопар](/images/typora_ap_00.png)
 
 ## Обычные автопары
 

@@ -21,13 +21,13 @@ tags:
 
 Если ключа еще нет то генерируем его, если он уже создан раньше то загружаем.
 
-![PUTTYGEN загрузка ключа](images/git_ssh_import_key.png)
+![PUTTYGEN загрузка ключа](/images/git_ssh_import_key.png)
 
 ## Сохранение приватного ключа
 
 Импортируем ключ в формат OpenSSH. Сохранить полученный файл нужно под именем .ssh\\id\_rsa в каталоге пользователя.
 
-![PUTTYGEN экспорт ключа в OpenSSH формат](images/git_ssh_export_key.png)
+![PUTTYGEN экспорт ключа в OpenSSH формат](/images/git_ssh_export_key.png)
 
 Пример полного пути к id\_rsa C:\\Users\\QQQ\\.ssh\\id\_rsa
 
@@ -37,16 +37,16 @@ tags:
 
 Копируем публичный ключ из текстового поля PUTTYGEN
 
-![PUTTYGEN копирование ключа](images/git_ssh_import_github1.png)
+![PUTTYGEN копирование ключа](/images/git_ssh_import_github1.png)
 
 Заходим в настройки GitHub пункт `SSH and GPG keys`. Нажимаем `New SSH key`.
 
-![добаление ключа на GitHub](images/git_ssh_import_github3.png)
+![добаление ключа на GitHub](/images/git_ssh_import_github3.png)
 
-![добаление ключа на GitHub](images/git_ssh_import_github2.png)
+![добаление ключа на GitHub](/images/git_ssh_import_github2.png)
 
 Запускаем консоль и клонируем репозиторий
 
 git clone git@github.com:Kverde/way23\_examples.git
 
-![подключение по ssh](images/git_ssh_import_github4.png)
+![подключение по ssh](/images/git_ssh_import_github4.png)

@@ -18,9 +18,9 @@ tags:
 
 Теперь Вася хочет посмотреть что именно менял Петя в репозитории. Для этого он открывает Журнал, и делает в нем двойном клик на файле который его интересует.
 
-![TortoiseSVN журнал](images/tortoisesvn_12.png)
+![TortoiseSVN журнал](/images/tortoisesvn_12.png)
 
-![TortoiseSVN diff](images/tortoisesvn_13.png)
+![TortoiseSVN diff](/images/tortoisesvn_13.png)
 
 Сразу видно что Петя вынес весь код в отдельную функцию. Увидев это Вася решил внести новые изменения в код. Он изменяет файл `main.py` и фиксирует.
 
@@ -32,17 +32,17 @@ def hello(name):
 
 hello()
 
-![TortoiseSVN диалог фиксации](images/tortoisesvn_14.png)
+![TortoiseSVN диалог фиксации](/images/tortoisesvn_14.png)
 
 Через некоторое время Петя решил проверить состояние репозитория. Для этого он открывает Журнал и видит новую фиксацию Васи
 
-![TortoiseSVN журнал](images/tortoisesvn_15.png)
+![TortoiseSVN журнал](/images/tortoisesvn_15.png)
 
 Для обновления рабочей копии Петя нажимает Обновить
 
-![TortoiseSVN запуск обновления рабочей копии](images/tortoisesvn_16.png)
+![TortoiseSVN запуск обновления рабочей копии](/images/tortoisesvn_16.png)
 
-![TortoiseSVN обновление успешно завершено!](images/tortoisesvn_17.png)
+![TortoiseSVN обновление успешно завершено!](/images/tortoisesvn_17.png)
 
 Теперь в рабочей копии последняя версия файла `main.py`. Петя замечает что программа перестала работать, исправляет ошибку и фиксирует файл.
 
@@ -54,7 +54,7 @@ def hello(name):
 
 hello('Petya')
 
-![TortoiseSVN диалог фиксации](images/tortoisesvn_18.png)
+![TortoiseSVN диалог фиксации](/images/tortoisesvn_18.png)
 
 Через некоторое время к проекту возвращается Вася и решает добавить новую функцию. Но он забывает обновится перед началом редактирования и изменяет устаревший файл, который не содержит изменений Пети.
 
@@ -72,24 +72,24 @@ hello()
 
 и фиксирует его
 
-![TortoiseSVN диалог фиксации](images/tortoisesvn_19.png)
+![TortoiseSVN диалог фиксации](/images/tortoisesvn_19.png)
 
 фиксация не удается. SVN обнаруживает что Вася не обновился и редактировал старую версию файла.
 
-![TortoiseSVN неудачная фиксация](images/tortoisesvn_20.png)
+![TortoiseSVN неудачная фиксация](/images/tortoisesvn_20.png)
 
 Вася нажимает ОК и TortoiseSVN предлагает ему автоматически обновится.
 
-![TortoiseSVN диалог обновления перед фиксацией](images/tortoisesvn_21.png)
+![TortoiseSVN диалог обновления перед фиксацией](/images/tortoisesvn_21.png)
 
 Вася нажимает Обновить. Появляется окно обновления в котором написано что SVN автоматически слил изменения - объединил изменения Пети из репозитория и Васи в рабочей копии в одном файле.
 
-![TortoiseSVN обновление ](images/tortoisesvn_22.png)
+![TortoiseSVN обновление ](/images/tortoisesvn_22.png)
 
 После нажатия ОК снова появляется окно фиксации.
 
-![TortoiseSVN фиксация](images/tortoisesvn_23.png)
+![TortoiseSVN фиксация](/images/tortoisesvn_23.png)
 
 В этот раз фиксация Васи проходит удачно.
 
-![TortoiseSVN успешная фиксация](images/tortoisesvn_24.png)
+![TortoiseSVN успешная фиксация](/images/tortoisesvn_24.png)

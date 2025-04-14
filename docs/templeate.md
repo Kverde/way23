@@ -13,4 +13,4 @@ tags:
 
 Проверка скобок { без экранирования } текст
 
-![](images/flameshot/flameshot_03.png)
+![](/images/flameshot/flameshot_03.png)

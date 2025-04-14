@@ -17,17 +17,17 @@ tags:
 
 Откройте настройки и выберите раздел `Keyboard Shortcuts`, в поиск введите `print`, выберите пункт `Save a screenshot to Pictures`. 
 
-![](images/flameshot/flameshot_02.png)
+![](/images/flameshot/flameshot_02.png)
 
 В появившемся окне нажмите `Backspace`, чтобы отключить горячую клавишу и затем кнопку `Set`.
 
-![](images/flameshot/flameshot_03.png)
+![](/images/flameshot/flameshot_03.png)
 
-![](images/flameshot/flameshot_04.png)
+![](/images/flameshot/flameshot_04.png)
 
 Сотрите значение в писке, прокрутите список вниз и нажмите кнопку `+` для добавления новой клавиши.
 
-![](images/flameshot/flameshot_05.png)
+![](/images/flameshot/flameshot_05.png)
 
 Заполните поля:
 
@@ -35,7 +35,7 @@ tags:
 * Command: `flameshot gui`
 * Горячую клавишу установите `PrnScr`
 
-![](images/flameshot/flameshot_06.png)
+![](/images/flameshot/flameshot_06.png)
 
 Закройте настройки и проверьте работу, по кнопке `PrnScr` должен появиться интерфейс Flameshot.
 

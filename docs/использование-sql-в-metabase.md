@@ -24,7 +24,7 @@ SQL — это язык запросов к базам данных. Это ру
 
 После нажатия кнопки **Ask a Question** открывается редактор SQL-вопроса.
 
-![SQL запросы в Metabase](images/Metabase_ws_01_SQLInterface.png)
+![SQL запросы в Metabase](/images/Metabase_ws_01_SQLInterface.png)
 
 Чтобы попробовать, введите команду `select sum(subtotal), created_at from orders group by created_at`. Не беспокойтесь если не понимаете её полностью. Нажмите синюю кнопку запуска и посмотрите на таблицу, такую же как если бы вы задали вопрос о сумме колонки `Subtotal` в таблице `Orders`, сгруппированной по колонке `Created At`.
 
@@ -36,6 +36,6 @@ SQL-вопросы как и обычные вопросы сохраняютс�
 
 Если в SQL-запрос добавить переменные, то вопрос будет иметь поля для фильтрации в заголовке. Переменные применяются для фильтрации результатов без изменения запроса.
 
-![Фильтры SQL в Metabase](images/Metabase_ws_02_SQL-filter-widget.png)
+![Фильтры SQL в Metabase](/images/Metabase_ws_02_SQL-filter-widget.png)
 
 Работа с переменными в SQL-вопросах описана на [отдельной странице](https://metabase.com/docs/v0.33.0/users-guide/13-sql-parameters.html).

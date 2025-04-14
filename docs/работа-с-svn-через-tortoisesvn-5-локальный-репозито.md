@@ -16,15 +16,15 @@ TortoiseSVN позволяет создавать хранилище локал�
 
 Для создания репозитория выберите пункт меню **TortoiseSVN — Create repository here** на пустом каталоге.
 
-![TortoiseSVN create repository](images/tortoisesvn_5_01.png)
+![TortoiseSVN create repository](/images/tortoisesvn_5_01.png)
 
 Создан пустой репозиторий. Удобнее работать с репозиторием со стандартной структурой — с каталогами **trunk**, **branches** и **tags**. Нажмите **Create folder structure**, в появившимся окне, для создания стандартных каталогов.
 
-![TortoiseSVN create repository](images/tortoisesvn_5_02.png)
+![TortoiseSVN create repository](/images/tortoisesvn_5_02.png)
 
 Чтобы начать пользоваться репозиторием выгружаем рабочую копию. Адрес репозитория отображается в **Repo-browser**:
 
-![TortoiseSVN repo-browser](images/tortoisesvn_5_03.png) ![TortoiseSVN repo-browser](images/tortoisesvn_5_04.png)
+![TortoiseSVN repo-browser](/images/tortoisesvn_5_03.png) ![TortoiseSVN repo-browser](/images/tortoisesvn_5_04.png)
 
 ## Перебазирование
 
@@ -32,23 +32,23 @@ TortoiseSVN позволяет создавать хранилище локал�
 
 Предположим каталог с репозиторием переименован с **Rep** на **NewRep**.
 
-![Репоиторий и рабочая копия](images/tortoisesvn_5_05.png)
+![Репоиторий и рабочая копия](/images/tortoisesvn_5_05.png)
 
 Соответственно, команда обновления, как и остальные, перестала работать на рабочей копии.
 
-![TortoiseSVn update](images/tortoisesvn_5_06.png)
+![TortoiseSVn update](/images/tortoisesvn_5_06.png)
 
 Применим команду **Relocate**.
 
-![TortoiseSVN Relocate](images/tortoisesvn_5_07.png) ![TortoiseSVN Relocate](images/tortoisesvn_5_08.png)
+![TortoiseSVN Relocate](/images/tortoisesvn_5_07.png) ![TortoiseSVN Relocate](/images/tortoisesvn_5_08.png)
 
 Изменим адрес репозитория на новый.
 
-![TortoiseSVN Relocate](images/tortoisesvn_5_09.png)
+![TortoiseSVN Relocate](/images/tortoisesvn_5_09.png)
 
 Теперь команда обновления снова работает.
 
-![TortoiseSVN update](images/tortoisesvn_5_10.png)
+![TortoiseSVN update](/images/tortoisesvn_5_10.png)
 
 ## Ссылки
 

@@ -38,7 +38,7 @@ module.exports = {
 
 Запускаем сайт, скролим вниз и видим появившуюся кнопку:
 
-![Плагин VuePress scroll to top](images/vuepress_plugin_scrolltotop.png)
+![Плагин VuePress scroll to top](/images/vuepress_plugin_scrolltotop.png)
 
 ## reading-progress
 
@@ -67,7 +67,7 @@ module.exports = {
 
 При прокрутке отображается прогресс чтения:
 
-![Плагин VuePress reading progress](images/vuepress_plugin_reading_progress.png)
+![Плагин VuePress reading progress](/images/vuepress_plugin_reading_progress.png)
 
 Плагин позволяет настроить отображения индикатора только на некоторых страницах: как глобально в настройках, так и для каждой странице отдельно. Пример глабальной настройки включающей индикатор везде кроме главной страницы:
 

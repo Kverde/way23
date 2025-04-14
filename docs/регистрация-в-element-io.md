@@ -16,30 +16,30 @@ tags:
 
 Для регистрации зайдите на сайт [Element.io](https://element.io/get-started) и нажмите кнопку "Open in your browser".
 
-![Element.io регистрация](images/element_open_in_browser.png)
+![Element.io регистрация](/images/element_open_in_browser.png)
 
 Нажмите кнопку **Create account**:
 
-![Element.io регистрация](images/element_create_account.jpg)
+![Element.io регистрация](/images/element_create_account.jpg)
 
 Введите имя пользователя и пароль. Выберите логин и пароль отличные и не похожие на используемые на других ресурсах. Не используйте почту при регистрации.
 
-![Element.io регистрация](images/element_login_form.jpg)
+![Element.io регистрация](/images/element_login_form.jpg)
 
 После регистрации настройте кодовую фразу для шифрования сообщений. Зайдите в настройки
 
-![Element.io регистрация](images/element_setting.png)
+![Element.io регистрация](/images/element_setting.png)
 
 Во вкладке **Security & Privacy** перейдите к разделу **Secure Backup** и нажмите **Set up**.
 
-![Element.io регистрация](images/element_secure_backup.png)
+![Element.io регистрация](/images/element_secure_backup.png)
 
 Выберите тип способа доступа по ключевой фразе и введите саму ключевую фразу:
 
-![Element.io регистрация](images/element_secure_phrase_choice.png)
+![Element.io регистрация](/images/element_secure_phrase_choice.png)
 
-![Element.io регистрация](images/element_secure_phrase_enter.png)
+![Element.io регистрация](/images/element_secure_phrase_enter.png)
 
 Не сохраняйте предложенный мессенджером ключ доступа, используйте только ключевую фразу.
 
-![Element.io регистрация](images/element_secure_key.png)
+![Element.io регистрация](/images/element_secure_key.png)

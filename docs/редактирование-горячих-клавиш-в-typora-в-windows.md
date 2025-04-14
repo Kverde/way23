@@ -11,19 +11,19 @@ tags:
 
 Добавим горячую клавишу к пункту меню `Paragraph - Footnotes`:
 
-![Typora Footnotes](images/typora_hotkey01.png)
+![Typora Footnotes](/images/typora_hotkey01.png)
 
 Откройте настройки командой `File - Preferences`:
 
-![Открыть настройки Typora](images/typora_hotkey02.png)
+![Открыть настройки Typora](/images/typora_hotkey02.png)
 
 Нажмите кнопку `Open Advanced Settings` в группе `General`:
 
-![Открыть дополнительные настройки Typora](images/typora_hotkey03.png)
+![Открыть дополнительные настройки Typora](/images/typora_hotkey03.png)
 
 Откроется папка с файлами дополнительных настроек, в ней откройте файл `conf.user.json`:
 
-![Файл дополнительных настроек Typora](images/typora_hotkey04.png)
+![Файл дополнительных настроек Typora](/images/typora_hotkey04.png)
 
 Добавьте название пункта меню и горячие клавиши по примеру:
 
@@ -39,7 +39,7 @@ tags:
 
 Перезапустите Typora, горячая клавиша будет работать и отображться в меню:
 
-![Новая горячая клавиша Typora](images/typora_hotkey05.png)
+![Новая горячая клавиша Typora](/images/typora_hotkey05.png)
 
 Такими способом можно редактировать и другие горячие клавиши.
 

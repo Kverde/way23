@@ -13,13 +13,13 @@ tags:
 
 Игра [Super Markup Man](https://store.steampowered.com/app/502210/Super_Markup_Man/) похожа на обычный тренажер по HTML и CSS: на каждом уровне нужно сверстать разметку по макету. Отличие в том, что теги переносятся как в игре-платформере, с помощью специального персонажа. Слева игровое поле, а справа результат:
 
-![html](images\super-markup-man\html.png)
+![html](/images\super-markup-man\html.png)
 
 Ожидаемый результат отображается по `Ctrl`.
 
 Всего в игре 50 уровней с `HTML` и 50 c `CSS`. `CSS` «редактируется» так же как и `HTML`:
 
- ![css](images\super-markup-man\css.png)
+ ![css](/images\super-markup-man\css.png)
 
 В игре присутствует даже кооперативный режим, трудно представить кому он может быть интересен, возможно, для игры с детьми.
 
@@ -33,15 +33,15 @@ tags:
 
 
 
-![advice](images\super-markup-man\advice.png)
+![advice](/images\super-markup-man\advice.png)
 
 
 
-![advice](images\super-markup-man\advice2.png)
+![advice](/images\super-markup-man\advice2.png)
 
-![advice](images\super-markup-man\advice3.png)
+![advice](/images\super-markup-man\advice3.png)
 
-![advice](images\super-markup-man\advice4.png)
+![advice](/images\super-markup-man\advice4.png)
 
 
 

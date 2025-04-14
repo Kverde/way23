@@ -18,4 +18,4 @@ sudo apt-get install font-manager
 
 Затем запустите приложение `Font Manager`. В приложении, через кнопку в панели инструментов, выберите нужные файлы шрифтов. 
 
-![](images/font_manager_01.png)
+![](/images/font_manager_01.png)

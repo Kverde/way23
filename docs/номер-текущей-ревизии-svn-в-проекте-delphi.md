@@ -109,12 +109,12 @@ end;
 
 В настройке проекта, для `All configurations`, добавляем запуск `_CreateInclude.bat` перед сборкой
 
-![](images/delphi_svn_1-300x109.png)
+![](/images/delphi_svn_1-300x109.png)
 
 Компилируем проект, ревизия отображается в свойствах файла и в заголовке формы.
 
-![](images/delphi_svn_2.png)
+![](/images/delphi_svn_2.png)
 
-![](images/delphi_svn_3-300x185.png)
+![](/images/delphi_svn_3-300x185.png)
 
 [Пример на GitHub](https://github.com/Kverde/way23_examples/tree/master/Delphi/SvnRevision)

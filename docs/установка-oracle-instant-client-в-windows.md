@@ -76,4 +76,4 @@ sqlplus system/my\_password@MY\_DATABASE
 
 И на всякий случай ссылка на [Microsoft Visual C++ 2015 Redistributable Package](https://www.microsoft.com/ru-ru/download/details.aspx?id=48145).
 
-Если все верно, то произойдет подключение к БД ![SqlPlus - подключение к БД](images/1.png)
+Если все верно, то произойдет подключение к БД ![SqlPlus - подключение к БД](/images/1.png)

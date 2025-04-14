@@ -85,4 +85,4 @@ module.exports = {
 
 Проверим результат:
 
-![Разный цвет заголовков](images/VuePress_CustomStyles.png)
+![Разный цвет заголовков](/images/VuePress_CustomStyles.png)

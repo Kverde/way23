@@ -9,7 +9,7 @@ tags:
 
 # {{ $frontmatter.title }}
 
-![Saved messages Telegram](images/telegram_saved_messages.jpg)
+![Saved messages Telegram](/images/telegram_saved_messages.jpg)
 
 Saved messages — особый контакт Telegram. Некоторые варианты его использования:
 

@@ -17,6 +17,6 @@ tags:
 sudo ./RosaImageWriter 
 ```
 
-![](images/rosa-image-writer.png)
+![](/images/rosa-image-writer.png)
 
 В интерфейсе программы есть только два поля: путь к iso-образу и флешка для записи образа.

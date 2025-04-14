@@ -12,7 +12,7 @@ tags:
 
 Настройка горячих клавиш PL/SQL developer производится в меню Tools->Preference->Key Configuration.
 
-![Форма настройки горячих клавиш PL/SQL Developer](images/pl_sql_dev_hot_key_1.png)
+![Форма настройки горячих клавиш PL/SQL Developer](/images/pl_sql_dev_hot_key_1.png)
 
 Для изменения достаточно встать на строку с часто используемым действием и нажать сочетание клавиш.
 

@@ -8,7 +8,7 @@ categories:
 
 # {{ $frontmatter.title }}
 
-![flux logo](images/flux-icon-sm.png)
+![flux logo](/images/flux-icon-sm.png)
 
 [f.lux](https://justgetflux.com/) автоматически убирает синий цвет из спектра экрана в ночное время. Ночное время определяется автоматически по местоположению из настроек.
 

@@ -58,4 +58,4 @@ module.exports = {
 
 Проверяем работу на сайте:
 
-![favicon в VuePress](images/vuepress_favicon.png)
+![favicon в VuePress](/images/vuepress_favicon.png)

@@ -64,4 +64,4 @@ module.exports = {
 
 Результат:
 
-![Сложная таблица в VuePress](images/vuepress_multimd_table.png)
+![Сложная таблица в VuePress](/images/vuepress_multimd_table.png)

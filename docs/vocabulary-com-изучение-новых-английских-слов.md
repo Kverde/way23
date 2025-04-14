@@ -7,7 +7,7 @@ tags:
 
 # {{ $frontmatter.title }}
 
-![Описание слова true из vocabulary.com](images/vocabulary.png)
+![Описание слова true из vocabulary.com](/images/vocabulary.png)
 
 [vocabulary.com](https://www.vocabulary.com/) — сайт для пополнения словарного запаса английского языка. Особенности:
 

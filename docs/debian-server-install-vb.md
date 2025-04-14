@@ -14,39 +14,39 @@ Debian не содержит отдельной версии для сервер
 
 [Создайте новую виртуальную машину](virtualbox-создание-и-настройка-виртуальной-м.md) в VirtualBox. В последних версия VirtualBox отключите автоматическую установку.
 
-![](images/debian-vb/debian-01.png)
+![](/images/debian-vb/debian-01.png)
 
 Зайдите в настройки виртуальной машины и измените сетевой адаптер на `Bridget adapter`.
 
 После запуска виртуальной машины выберите консольный вариант установки:
 
-![](images/debian-vb/debian-02.png)
+![](/images/debian-vb/debian-02.png)
 
 Установите подходящий `hostname`, он пригодится для подключения к виртуальной машине по SSH.
 
-![](images/debian-vb/debian-02-1.png)
+![](/images/debian-vb/debian-02-1.png)
 
 В следующих шагах оставляйте настройки по умолчанию, выберите подходящий пароль для root, имя пользователя и пароль для пользователя.
 
 Откажитесь от предложений установить дополнительные компоненты, подключится к сети и отправлять отчеты об установках пакетов.
 
-![](images/debian-vb/debian-03.png)
+![](/images/debian-vb/debian-03.png)
 
-![](images/debian-vb/debian-04.png)
+![](/images/debian-vb/debian-04.png)
 
-![](images/debian-vb/debian-05.png)
+![](/images/debian-vb/debian-05.png)
 
 Во время шага выбора компонентов отключите `Debian desktop environment` и включите `SSH server`.
 
-![](images/debian-vb/debian-06.png)
+![](/images/debian-vb/debian-06.png)
 
 Во время вопроса о том устанавливать ли GRUB выберите `yes`. 
 
-![](images/debian-vb/debian-07.png)
+![](/images/debian-vb/debian-07.png)
 
 Затем выберите устройство, чтобы не вводить его название вручную.
 
-![](images/debian-vb/debian-08.png)
+![](/images/debian-vb/debian-08.png)
 
 При установке Debian без графического окружения автоматически не устанавливаются пакеты, нужные для работы сети. Для возможности установки пакетов из онлайн репозиториев, а не с диска, измените файл `/etc/apt/sources.list`:
 

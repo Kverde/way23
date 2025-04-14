@@ -26,7 +26,7 @@ StartupNotify=true
 
 Затем сделайте этот файл запускаемым через `chmod` или через свойства ярлыка:
 
-![](images/ubuntu_desktop_01.png)
+![](/images/ubuntu_desktop_01.png)
 
 На последнем шаге нажмите правую кнопку мыши на ярлыке и выберите пункт `Allow Launching`.
 

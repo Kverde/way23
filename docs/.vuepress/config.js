@@ -1,4 +1,16 @@
-module.exports = {
+import { defaultTheme } from '@vuepress/theme-default';
+import { viteBundler } from '@vuepress/bundler-vite';
+import { defineUserConfig } from 'vuepress';
+
+import md_footnote from "markdown-it-footnote";
+import md_table from "markdown-it-multimd-table";
+import md_katex from "@iktakahiro/markdown-it-katex";
+
+export default defineUserConfig ({
+  bundler: viteBundler({
+    viteOptions: {},
+    vuePluginOptions: {},
+  }),
   lang: "ru-RU",
   title: "Way23",
   base: "/",
@@ -50,7 +62,7 @@ module.exports = {
     ],
     // <!-- /revisionme -->
   ],
-  themeConfig: {
+  theme: defaultTheme({
     sidebar: false,
     contributors: false,
     lastUpdatedText: "Последниее изменение",
@@ -59,14 +71,16 @@ module.exports = {
       { text: "По категориям", link: "/categories.md" },
       { text: "Контакты", link: "/contacts.md" },
     ],
-  },
-
+  }),
   extendsMarkdown: (md) => {
-    md.use(require("markdown-it-footnote"));
-    md.use(require("markdown-it-multimd-table"), {
+    md.use(md_footnote);
+    md.use(md_katex, {
+      strict: false,
+    });
+    md.use(md_table, {
       multiline: true,
       rowspan: true,
       headerless: true,
     });
   },
-}
+})

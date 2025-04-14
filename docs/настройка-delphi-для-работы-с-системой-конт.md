@@ -38,8 +38,8 @@ IDE Fix Pack исправляет и много других проблем по
 
 По сути после фиксации в проекте ничего не изменилось. У панели как было `Align = alClient` так и осталось. Но посмотрим изменения через diff
 
-![Просмотр измненеий в SVN](images/delphi_svn_fix_1.png)
+![Просмотр измненеий в SVN](/images/delphi_svn_fix_1.png)
 
 Свойства `Explicit` _отвечают за то как панель отображается в редакторе когда она была со свойством `Align = alNone`. Необходимости в таком поведении нет, а проблемы те же что и в предыдущем пункте. Для удаления этих свойств установим [DDevExtensions](http://andy.jgknet.de/blog/ide-tools/ddevextensions/). И отключим сохранение свойств `Explicit`_
 
-![DDevExtension](images/delphi_svn_fix_1_5.png) ![DDevExtension](images/delphi_svn_fix_2.png)
+![DDevExtension](/images/delphi_svn_fix_1_5.png) ![DDevExtension](/images/delphi_svn_fix_2.png)

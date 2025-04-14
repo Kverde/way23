@@ -50,4 +50,4 @@ $$
 
 При запуске сайта код преобразуется в формулы:
 
-![](images/vuepress_katex.png)
+![](/images/vuepress_katex.png)

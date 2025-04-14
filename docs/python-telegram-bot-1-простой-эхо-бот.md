@@ -9,7 +9,7 @@ tags:
 
 # {{ $frontmatter.title }}
 
-![Эхо-бот Telegram](images/python_telegram_bot_1.png)
+![Эхо-бот Telegram](/images/python_telegram_bot_1.png)
 
 В этом цикле постов описаны возможности [Python-telegram-bot](https://python-telegram-bot.org/) - библиотеки для написания ботов Telegram.
 

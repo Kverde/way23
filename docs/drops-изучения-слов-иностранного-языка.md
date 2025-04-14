@@ -9,7 +9,7 @@ tags:
 
 # {{ $frontmatter.title }}
 
-![drops logo](images/drops.png)
+![drops logo](/images/drops.png)
 
 В отличии от других программ для запоминания слов, в [Drops](https://play.google.com/store/apps/details?id=com.languagedrops.drops.international) для изучения слов нужно выбирать не перевод слова а пиктограмму. Это позволяет обойтись без лишнего перевода — думать сразу о понятии которое скрыто за словом. Поддерживается [большое количество языков](https://languagedrops.com/languages).
 

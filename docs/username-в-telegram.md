@@ -13,12 +13,12 @@ tags:
 
 Добавить и изменить `username` можно как с десктопной, так и с мобильной версии Telegram. Ниже скриншоты с десктопной версии. Сначала зайдите в настройки:
 
-![Вход в настройки Telegram](images/telegram_username_1.png)
+![Вход в настройки Telegram](/images/telegram_username_1.png)
 
 Выберите пункт `Edit profile`:
 
-![Вход в настройки Telegram](images/telegram_username_3.png)
+![Вход в настройки Telegram](/images/telegram_username_3.png)
 
 Затем установите `username`:
 
-![Изменение username](images/telegram_username_2.png)
+![Изменение username](/images/telegram_username_2.png)

@@ -14,11 +14,11 @@ tags:
 
 Переменные, добавленные в SQL запросы, позволяют динамически заменять значения в запросе используя виджеты или через URL запроса.
 
-![Виджет фильтра в Metabase](images/metabase_var_01_02-widget.png)
+![Виджет фильтра в Metabase](/images/metabase_var_01_02-widget.png)
 
 Настройки переменных появляются в панели **Variables** редактора запросов после добавления переменных.
 
-![настройка переменной Metabase](images/metabase_var_02_01-variables.png)
+![настройка переменной Metabase](/images/metabase_var_02_01-variables.png)
 
 ## Определение переменной
 

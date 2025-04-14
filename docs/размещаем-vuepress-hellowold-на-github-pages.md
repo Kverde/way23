@@ -120,7 +120,7 @@ pause
 
 Теперь зайдите в настройки репоизтория и выберите ветку `gh-pages` в настройках GitHub Pages.
 
-![Настройка GitHub Pages в параметрах репозитория](images/VuePressHelloWorld_GitHubSetting.png)
+![Настройка GitHub Pages в параметрах репозитория](/images/VuePressHelloWorld_GitHubSetting.png)
 
 Переходите по ссылке `https://USERNAME.github.io/REPO/` и проверяйте работу сайта.
 

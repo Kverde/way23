@@ -11,17 +11,17 @@ tags:
 
 Сначала добавим диск, в VirtualBox это делается в настройках виртуальной машины. Добавим новый диск размером 1гб.
 
-![](images/linux-fdisk/linux-fdisk-01.png)
+![](/images/linux-fdisk/linux-fdisk-01.png)
 
-![](images/linux-fdisk/linux-fdisk-02.png)
+![](/images/linux-fdisk/linux-fdisk-02.png)
 
-![](images/linux-fdisk/linux-fdisk-03.png)
+![](/images/linux-fdisk/linux-fdisk-03.png)
 
-![](images/linux-fdisk/linux-fdisk-04.png)
+![](/images/linux-fdisk/linux-fdisk-04.png)
 
-![](images/linux-fdisk/linux-fdisk-05.png)
+![](/images/linux-fdisk/linux-fdisk-05.png)
 
-![](images/linux-fdisk/linux-fdisk-06.png)
+![](/images/linux-fdisk/linux-fdisk-06.png)
 
 Проверим, что в системе появился второй диск
 

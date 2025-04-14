@@ -26,21 +26,21 @@ tags:
 
 4. Разделите флешку на два раздела используя программу из пункта 3. Сначала удалите все разделы.
 
-![Удаление разделов](images/install-kodachi/linux_kodachi_make_partitions_1.png)
+![Удаление разделов](/images/install-kodachi/linux_kodachi_make_partitions_1.png)
 
 4.1 Создайте первый раздел и отформатируйте его в FAT32, назовите его `LKOS` (Linux Kodachi OS) и установить Primary Partition. Это будет диск для операционной системы.
 
-![Содание раздела на USB-накопителе](images/install-kodachi/linux_kodachi_make_partitions_2.png)
+![Содание раздела на USB-накопителе](/images/install-kodachi/linux_kodachi_make_partitions_2.png)
 
-![Содание раздела на USB-накопителе](images/install-kodachi/linux_kodachi_make_partitions_3.png)
+![Содание раздела на USB-накопителе](/images/install-kodachi/linux_kodachi_make_partitions_3.png)
 
 4.2 Второй раздел отформатируйте так же в FAT32, и назовите `LK0S` (Обратите внимание что вместо буквы «O» используется ноль) и установить Logical Partition. Это будет диск для данных.
 
-![Содание раздела на USB-накопителе](images/install-kodachi/linux_kodachi_make_partitions_4.png)
+![Содание раздела на USB-накопителе](/images/install-kodachi/linux_kodachi_make_partitions_4.png)
 
 5. Запустите программу YUMI. Выберите нужный USB-накопитель и iso образ системы и запустите установку.
 
-![Настройка YUMI](images/install-kodachi/linux_kodachi_yumi.png)
+![Настройка YUMI](/images/install-kodachi/linux_kodachi_yumi.png)
 
 6. Запустите Linux Kodachi с флешки используя настройки BIOS.
 
@@ -54,7 +54,7 @@ tags:
 
 3. Запустите программу Rufus. Выберите нужный USB-накопитель и iso образ системы и запустите установку.
 
-![Настройка Rufus](images/install-kodachi/linux_kodachi_rufus.png)
+![Настройка Rufus](/images/install-kodachi/linux_kodachi_rufus.png)
 
 4. Запустите Linux Kodachi с флешки в режиме `Full RAM mode`, режим выбирается при загрузке операционной системы
 

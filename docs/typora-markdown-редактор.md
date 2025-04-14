@@ -18,6 +18,6 @@ tags:
 - Формулы в LaTex. Встроенные и отдельными блоками.
 - Проверка орфографии.
 
-![](images/typora_sc01.png)
+![](/images/typora_sc01.png)
 
 До Typora я использовал [MarkdownPad](http://markdownpad.com/), Typora намного более удобен и функционален.

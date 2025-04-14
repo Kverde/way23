@@ -25,11 +25,11 @@ View -> Show Symbols -> Show End of Line
 
 На статус баре Notepad++ отображает кодировку открытого файла
 
-![notepad_end_line01](images\notepad_end_line01.png)
+![notepad_end_line01](/images\notepad_end_line01.png)
 
 При клике правой кнопкой мыши появляется меню для смены символов окончания строк в текущем файле
 
-![notepad_end_line02](images\notepad_end_line02.png)
+![notepad_end_line02](/images\notepad_end_line02.png)
 
 В настройках можно задать символы окончания строк для новых документов
 
@@ -37,4 +37,4 @@ View -> Show Symbols -> Show End of Line
 Setting -> Preferences... -> New Document -> Format (Line ending)
 ```
 
-![notepad_end_line03](images\notepad_end_line03.png)
+![notepad_end_line03](/images\notepad_end_line03.png)

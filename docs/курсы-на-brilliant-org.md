@@ -8,7 +8,7 @@ tags:
 
 # {{ $frontmatter.title }}
 
-![Brilliant org logo](images/brilliant.png)
+![Brilliant org logo](/images/brilliant.png)
 
 На [brilliant.org](https://brilliant.org) находятся курсы по математике и CS ([полный список курсов](https://brilliant.org/courses/)). Курсы построены в полуигровой форме, сначала даётся попытка решить задание, потом краткое объяснение. Задачи направлены на концептуальное понимание тем, теории мало, периодически бывают ссылки на подробное описание.
 

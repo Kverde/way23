@@ -16,32 +16,32 @@ tags:
 
 Запускаем WinMerge и нажимаем кнопку Open на панели инструментов.
 
-![Кнопка Open в панели инструментовWinMege](images/img1.png)
+![Кнопка Open в панели инструментовWinMege](/images/img1.png)
 
 Выбираем два файла и нажимаем Compare.
 
-![Диалог открытия файлов WinMerge](images/img2.png)
+![Диалог открытия файлов WinMerge](/images/img2.png)
 
 Открывается вкладка со сравнением, выделены отличающиеся в файлах строки.
 
-![Сравнение файлов в WinMerge](images/img3.png)
+![Сравнение файлов в WinMerge](/images/img3.png)
 
 ## Сравнение двух текстов
 
 Если файлов нет, а нужно просто сравнить два текста, то для этого подойдёт кнопка NewDocument.
 
-![Кнопка NewDocument в WinMerge](images/img4.png)
+![Кнопка NewDocument в WinMerge](/images/img4.png)
 
 В появившейся вкладке вводим в левую и правую панели сравниваемые тексты и нажимаем кнопку Refresh.
 
-![Заполнение текстов для сравнения в WinMerge](images/img5.png)
+![Заполнение текстов для сравнения в WinMerge](/images/img5.png)
 
 Получаем подсветку различий в текстах.
 
-![Сравнение текстов в WinMerge](images/img6.png)
+![Сравнение текстов в WinMerge](/images/img6.png)
 
 ## Установка по умолчанию в TortoiseSVN
 
 WinMerge можно установить как инструмент слияний в TortoiseSVN взамен стандартного TortoiseMerge. Мне больше нравится стандартный, поэтому я его не меняю. Посмотреть какой установлен и изменить можно в меню TortoiseSVN — Settings — MergeTool.
 
-![Настройки TortoiseSVN](images/img7.png) ![Установка инструмента слияния в TortoiseSVN](images/img8.png)
+![Настройки TortoiseSVN](/images/img7.png) ![Установка инструмента слияния в TortoiseSVN](/images/img8.png)

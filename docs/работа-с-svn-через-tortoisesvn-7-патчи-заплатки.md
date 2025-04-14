@@ -14,21 +14,21 @@ TortoiseSVN содержит функции экспорта изменения 
 
 Для создания патча выберите в меню TortoiseSVN пункт **Create patch...**.
 
-![TortoiseSVN Create patch](images/tortoisesvn_07_01.png)
+![TortoiseSVN Create patch](/images/tortoisesvn_07_01.png)
 
 Появиться окно с выбором файлов, изменения из которых войдут в патч. Обычно, нужно выбрать все.
 
-![TortoiseSVN Create patch](images/tortoisesvn_07_02.png)
+![TortoiseSVN Create patch](/images/tortoisesvn_07_02.png)
 
 Затем появиться диалог с выбором имени и расположения файла патча и в конце отобразиться содержимое патча в специальном окне TortoiseSVN.
 
-![TortoiseSVN patch](images/tortoisesvn_07_03.png)
+![TortoiseSVN patch](/images/tortoisesvn_07_03.png)
 
 Патч агрегирует изменения всех файлов проекта. Пути к файлам формируются относительно каталога из которого он создаётся. Поэтому применять патч нужно к тому же каталогу. Чтобы избежать путаницы создавайте патчи с корня рабочей копии.
 
 Просматривать патч можно через просмотрщик TortoiseSVN или применив патч к рабочей копии.
 
-![TortoiseSVN Apply patch](images/tortoisesvn_07_04.png)
+![TortoiseSVN Apply patch](/images/tortoisesvn_07_04.png)
 
 Патч является простым текстовым файлом — просматривается в любом текстовом редакторе. Но без применения патча к рабочей копии видно только ближайшие к изменениям строки. Пример текста патча:
 

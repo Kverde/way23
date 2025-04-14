@@ -18,61 +18,61 @@ tags:
 
 Запускаем виртуальную машину.
 
-![Запуск виртуальной машины](images/vm_ubuntu_start_1.png)
+![Запуск виртуальной машины](/images/vm_ubuntu_start_1.png)
 
 Начинается процесс установки. Выбираем язык установки.
 
-![Выбор языка](images/vm_ubuntu_setup_1.png)
+![Выбор языка](/images/vm_ubuntu_setup_1.png)
 
 Выбираем _Установить Ubuntu Server_
 
-![Меню установки Ubuntu](images/vm_ubuntu_setup_2.png)
+![Меню установки Ubuntu](/images/vm_ubuntu_setup_2.png)
 
 Дальше идут региональные настройки. Выбираем _нет_ на вопрос _Определить раскладку клавиатуры?_ и выбираем настройки вручную.
 
-![Выбор региона](images/vm_ubuntu_setup_3.png) ![Настройка клавиатуры](images/vm_ubuntu_setup_4.png) ![Настройка клавиатуры](images/vm_ubuntu_setup_5.png) ![Настройка клавиатуры](images/vm_ubuntu_setup_6.png) ![Настройка клавиатуры](images/vm_ubuntu_setup_7.png)
+![Выбор региона](/images/vm_ubuntu_setup_3.png) ![Настройка клавиатуры](/images/vm_ubuntu_setup_4.png) ![Настройка клавиатуры](/images/vm_ubuntu_setup_5.png) ![Настройка клавиатуры](/images/vm_ubuntu_setup_6.png) ![Настройка клавиатуры](/images/vm_ubuntu_setup_7.png)
 
 Выбираем имя по которому ВМ будет видно в сети
 
-![Настройка сети](images/vm_ubuntu_setup_8.png)
+![Настройка сети](/images/vm_ubuntu_setup_8.png)
 
 Логин и пароль будут использоваться при удаленном подключении к виртуальной машине.
 
-![Настройка учетных записей пользователей](images/vm_ubuntu_setup_9.png) ![Настройка учетных записей пользователей](images/vm_ubuntu_setup_10.png) ![Настройка учетных записей пользователей](images/vm_ubuntu_setup_11.png)
+![Настройка учетных записей пользователей](/images/vm_ubuntu_setup_9.png) ![Настройка учетных записей пользователей](/images/vm_ubuntu_setup_10.png) ![Настройка учетных записей пользователей](/images/vm_ubuntu_setup_11.png)
 
 На виртуальной машины для экспериментов шифрование не имеет смысла.
 
-![Настройка учетных записей пользователей](images/vm_ubuntu_setup_12.png) ![Настройка времени](images/vm_ubuntu_setup_13.png)
+![Настройка учетных записей пользователей](/images/vm_ubuntu_setup_12.png) ![Настройка времени](/images/vm_ubuntu_setup_13.png)
 
 Выбираем использовать весь диск в автоматическом режиме.
 
-![Разметка дисков](images/vm_ubuntu_setup_14.png) ![Разметка дисков](images/vm_ubuntu_setup_15.png) ![Разметка дисков](images/vm_ubuntu_setup_16.png)
+![Разметка дисков](/images/vm_ubuntu_setup_14.png) ![Разметка дисков](/images/vm_ubuntu_setup_15.png) ![Разметка дисков](/images/vm_ubuntu_setup_16.png)
 
 Если используется прокси его нужно указать
 
-![Разметка дисков](images/vm_ubuntu_setup_17.png)
+![Разметка дисков](/images/vm_ubuntu_setup_17.png)
 
 Выбираем _Без автоматического обновления_
 
-![Настройка обновлений](images/vm_ubuntu_setup_18.png)
+![Настройка обновлений](/images/vm_ubuntu_setup_18.png)
 
 Среди программ выбираем _OpenSSH server_ чтобы настроить подключение к серверу без ввода пароля. Остальное лучше ставить вручную после установки.
 
-![Диалог Выбор программного обеспечения](images/virtualbox_3.png)
+![Диалог Выбор программного обеспечения](/images/virtualbox_3.png)
 
 Выбираем установку Да так как жесткий диск используется только для одной виртуальной машины.
 
-![Установка GRUB](images/vm_ubuntu_setup_21.png)
+![Установка GRUB](/images/vm_ubuntu_setup_21.png)
 
 Установка завершена, после установки произойдет загрузка системы.
 
-![Завершение установки](images/vm_ubuntu_setup_22.png)
+![Завершение установки](/images/vm_ubuntu_setup_22.png)
 
 ## Настройка шрифта в консоли
 
 Запускаем ВМ, вводим логин и пароль. Сразу видно проблему с отображением кириллицы
 
-![проблема с кириллицей к консоли](images/vm_ubuntu_setupcon_1.png)
+![проблема с кириллицей к консоли](/images/vm_ubuntu_setupcon_1.png)
 
 Для исправления исправления в текущем сеансе нужно ввести команду
 
@@ -86,7 +86,7 @@ sudo nano /etc/crontab
 
 @reboot setupcon --force
 
-![редактор crontab](images/vm_ubuntu_crontab.png)
+![редактор crontab](/images/vm_ubuntu_crontab.png)
 
 Выходим с сохранением
 
@@ -101,7 +101,7 @@ sudo apt upgrade
 
 reboot
 
-Кириллица отображается правильно ![Кириллица в консоли](images/virtualbox_4.png)
+Кириллица отображается правильно ![Кириллица в консоли](/images/virtualbox_4.png)
 
 ## Подключение к серверу через SSH
 
@@ -109,10 +109,10 @@ reboot
 
 ifconfig
 
-![Вывод команды ifconfig](images/virtualbox_5.png)
+![Вывод команды ifconfig](/images/virtualbox_5.png)
 
 Копируем IP. Выключаем ВМ, и запускаем в фоновом режиме
 
-![](images/virtualbox_6.png)
+![](/images/virtualbox_6.png)
 
 Настройка подключения через PUTTY [в следующей статье](http://way23.ru/%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%ba-%d1%81%d0%b5%d1%80%d0%b2%d0%b5%d1%80%d1%83-%d1%87%d0%b5%d1%80%d0%b5%d0%b7-ssh-%d0%b8-putty/).

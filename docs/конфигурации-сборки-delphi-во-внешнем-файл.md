@@ -16,11 +16,11 @@ tags:
 
 Список конфигураций находится в ветке `Build Configurations` в менеджере проекта.
 
-![Список конфигураций](images/delphi_build_config_1.png)
+![Список конфигураций](/images/delphi_build_config_1.png)
 
 Откроем настройки для просмотра подробностей
 
-![Конфигурации сборки](images/delphi_build_config_2.png) ![Редактор конфигураций](images/delphi_build_config_3.png)
+![Конфигурации сборки](/images/delphi_build_config_2.png) ![Редактор конфигураций](/images/delphi_build_config_3.png)
 
 В новом проекте три конфигурации
 
@@ -34,7 +34,7 @@ tags:
 
 Создадим новый файл настроек для конфигурации Debug
 
-![Добавления нового optset](images/delphi_build_config_new_option_set.png)
+![Добавления нового optset](/images/delphi_build_config_new_option_set.png)
 
 Сохраним его рядом с файлом проекта в отдельный каталог
 
@@ -42,15 +42,15 @@ tags:
 
 Теперь отредактируем его
 
-![Редактирование optset](images/delphi_build_config_edit_1_option_set.png)
+![Редактирование optset](/images/delphi_build_config_edit_1_option_set.png)
 
 Включим `Oweflow checking` и `Range checking`
 
-![Редактирование optset](images/delphi_build_config_edit_option_set.png)
+![Редактирование optset](/images/delphi_build_config_edit_option_set.png)
 
 Перейдем в редактор конфигурации `Debug` для проверки
 
-![Редактирование параметров Debug](images/delphi_build_edit_debug.png) ![Настройки Debug с внешним файлом](images/delphi_build_debug_with_optset.png)
+![Редактирование параметров Debug](/images/delphi_build_edit_debug.png) ![Настройки Debug с внешним файлом](/images/delphi_build_debug_with_optset.png)
 
 Настройки перекрывают друг друга в следующей последовательности: самый низкой приоритет у родительской конфигурации `All configurations`, потом из подключенного файла `debug.optset`, потом настройки проекта.
 
@@ -62,7 +62,7 @@ tags:
 
 Создадим второй проект и подключим к нему конфигурацию из внешнего файла.
 
-![Подключение файла настроек к проекту](images/delphi_build_config_apply.png) ![Подключение файла настроек к проекту](images/delphi_build_edit_applay2.png)
+![Подключение файла настроек к проекту](/images/delphi_build_config_apply.png) ![Подключение файла настроек к проекту](/images/delphi_build_edit_applay2.png)
 
 Путь к файлу получается выбрать только полный, но в настройках проекта сохраняется относительный. Поэтому проблем при хранении файла конфигурации в системе контроля версий не будет.
 
@@ -78,7 +78,7 @@ false
 
 Теперь открываем настройки любого проекта и видим что значение изменилось. В некоторых версиях Delphi старое значение отображается до перезапуска IDE.
 
-![Обновленные настройки Debug](images/delphi_build_edit_end.png)
+![Обновленные настройки Debug](/images/delphi_build_edit_end.png)
 
 [Пример на GitHub](https://github.com/Kverde/way23_examples/tree/master/Delphi/BuildConfigurations)
 

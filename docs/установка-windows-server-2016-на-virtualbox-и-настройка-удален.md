@@ -14,44 +14,44 @@ tags:
 
 Добавляем и запускаем новую ВМ, начинается процесс установки:
 
-![Выбор языка установщика](images/win_server_1.png)
+![Выбор языка установщика](/images/win_server_1.png)
 
-![Запуск установки](images/win_server_2.png)
+![Запуск установки](/images/win_server_2.png)
 
 Выбираем версию с рабочим столом.
 
-![Выбор версии Windows Server](images/win_server_3.png)
+![Выбор версии Windows Server](/images/win_server_3.png)
 
-![Лицензионное соглашение](images/win_server_4.png)
+![Лицензионное соглашение](/images/win_server_4.png)
 
-![Выбор типа установки](images/win_server_5.png)
+![Выбор типа установки](/images/win_server_5.png)
 
-![Выбор диска](images/win_server_6.png)
+![Выбор диска](/images/win_server_6.png)
 
-![Установка](images/win_server_7.png)
+![Установка](/images/win_server_7.png)
 
-![Установка пароля](images/win_server_8.png)
+![Установка пароля](/images/win_server_8.png)
 
-![Установка пароля](images/win_server_9.png)
+![Установка пароля](/images/win_server_9.png)
 
 ## Настройка удаленного подключения
 
 Открываем окно настроек системы
 
-![Запуск программ свойства системы](images/win_server_10.png)
+![Запуск программ свойства системы](/images/win_server_10.png)
 
-![Дополнительные параметры системы](images/win_server_11.png)
+![Дополнительные параметры системы](/images/win_server_11.png)
 
 Включаем удаленный доступ
 
-![Включение удаленного доступа](images/win_server_12.png)
+![Включение удаленного доступа](/images/win_server_12.png)
 
 Теперь запишем IP гостевой системы
 
-![Команда ipconfig](images/win_server_13.png)
+![Команда ipconfig](/images/win_server_13.png)
 
 Переходим в хостовую систему, настраиваем и сохраняем новое подключение
 
-![Запуск RDP](images/win_server_14.png)
+![Запуск RDP](/images/win_server_14.png)
 
-![Настройка RDP](images/win_server_15.png)
+![Настройка RDP](/images/win_server_15.png)

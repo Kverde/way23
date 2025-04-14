@@ -15,10 +15,10 @@ tags:
 
 Открываем настройки
 
-![Discord. Переход в настройки](images/discord_radioset_01.jpg)
+![Discord. Переход в настройки](/images/discord_radioset_01.jpg)
 
 Переходим в пункт **Голос и видео** и выбираем Режим ввода **Режим рации**
 
-![Discord включение режима рации](images/discord_radioset_02.jpg)
+![Discord включение режима рации](/images/discord_radioset_02.jpg)
 
 Настройка для кнопки активации режима рации находится ниже.

@@ -54,18 +54,18 @@ qqq@ubuntuserver:~$ dokku postgres:expose testdb
 
 Настройки закончены, для подключения к БД устанавливаем [pgAdmin](https://www.pgadmin.org/). Добавляем сервер
 
-![pgAdmin Добавление БД](images/1.png)
+![pgAdmin Добавление БД](/images/1.png)
 
 Заполняем название
 
-![pgAdmin Добавление БД](images/2.png)
+![pgAdmin Добавление БД](/images/2.png)
 
 И параметры подключения.
 
-![pgAdmin Добавление БД](images/3.png)
+![pgAdmin Добавление БД](/images/3.png)
 
 В поле **host name/address** нужно указать адрес сервера на котором расположен Dokku. **Port** - порт который был получен командой `expose`. **Database**, **user** и **password** - из строки dsn в описании контейнера.
 
 После сохранения БД доступна в списке
 
-![pgAdmin Подключение к БД](images/4.png)
+![pgAdmin Подключение к БД](/images/4.png)

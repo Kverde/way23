@@ -26,7 +26,7 @@ docker ps
 
 Название контейнеров находится в колонке `NAMES`:
 
-![команда docker ps](images/dokku_copy_01.png)
+![команда docker ps](/images/dokku_copy_01.png)
 
 Команда выводит только запущенные контейнеры `dockku`.
 

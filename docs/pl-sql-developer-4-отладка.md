@@ -14,31 +14,31 @@ tags:
 
 Открываем TestWindow и заполняем в нём код для проверки функции.
 
-![](images/pl_sql_dev_01.png)
+![](/images/pl_sql_dev_01.png)
 
-![](images/pl_sql_dev_02.png)
+![](/images/pl_sql_dev_02.png)
 
 Теперь откроем код функции, это можно сделать по ПКМ на имени функции в коде
 
-![](images/pl_sql_dev_03.png)
+![](/images/pl_sql_dev_03.png)
 
 На нужной строке ставим точку остановки
 
-![](images/pl_sql_dev_04.png)
+![](/images/pl_sql_dev_04.png)
 
-![](images/pl_sql_dev_05.png)
+![](/images/pl_sql_dev_05.png)
 
 Обязательно нужно проверить что у отлаживаемого объекта добавлена отладочная информация (Add debug information)
 
-![](images/pl_sql_dev_06.png)
+![](/images/pl_sql_dev_06.png)
 
 Теперь в TestWindow нажимаем кнопку **Start debugger** или **F9**. Внизу можно указать переменные, значения которых нужно просматривать.
 
-![](images/pl_sql_dev_07.png)
+![](/images/pl_sql_dev_07.png)
 
 При нажатии Ctrl+R произойдёт выполнение кода до указанной точки остановки.
 
-![](images/pl_sql_dev_08.png)
+![](/images/pl_sql_dev_08.png)
 
 Код функции
 

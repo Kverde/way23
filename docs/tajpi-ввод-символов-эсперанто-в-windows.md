@@ -7,7 +7,7 @@ tags:
 
 # {{ $frontmatter.title }}
 
-![Настройки Tajpi](images/tajpi_configuration.png)
+![Настройки Tajpi](/images/tajpi_configuration.png)
 
 [Tajpi](http://www.zz9pza.net/tajpi/en/configuration/) — простая программа для ввода символов Эсперанто: ĉ, ĝ, ĥ, ĵ, ŝ и ŭ. Стандартной раскладкой их не ввести, [раскладка Ильи Бирмана](https://way23.ru/установка-типографской-раскладки-на-wind/) содержит нужные символы, но их ввод неудобен.
 

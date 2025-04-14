@@ -15,6 +15,6 @@ categories:
 
 После этого текст будет копироваться с форматированием.
 
-![](images/copy-caute.png)
+![](/images/copy-caute.png)
 
 Другой, более простой вариант, использовать зеркало [caute.tk](http://www.caute.tk/).
