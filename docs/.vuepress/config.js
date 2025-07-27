@@ -65,11 +65,10 @@ export default defineUserConfig ({
   theme: defaultTheme({
     sidebar: false,
     contributors: false,
-    lastUpdatedText: "Последниее изменение",
+    lastUpdatedText: "Последнее изменение",
     navbar: [
       { text: "Главная", link: "/" },
-      { text: "По категориям", link: "/categories.md" },
-      { text: "Контакты", link: "/contacts.md" },
+      { text: "По категориям", link: "/categories.md" }
     ],
   }),
   extendsMarkdown: (md) => {
