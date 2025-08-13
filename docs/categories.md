@@ -62,6 +62,7 @@
 * [Размещаем VuePress HelloWold на GitHub Pages](размещаем-vuepress-hellowold-на-github-pages.md)
 
 ## Linux
+* [Espanso — ввод спецсимволов](espanso-ввод-спецсимволов.md)
 * [Как определить откуда запускается команда в bash (type, which, whereis)](linux-type-which.md)
 * [Потоковый текстовый редактор sed](linux-sed.md)
 * [Создание и монтирование файловой системы в Linux (mkfs, mount, blkid, fstab)](linux-mkfs-mount-fstab.md)

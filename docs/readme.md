@@ -1,3 +1,6 @@
+## 2025.08
+* [Espanso — ввод спецсимволов](espanso-ввод-спецсимволов.md)
+
 ## 2025.03
 * [OCR через Tesseract на Linux](ocr-tesseract-linux.md)
 
