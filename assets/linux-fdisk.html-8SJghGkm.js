@@ -1,0 +1,88 @@
+import{_ as e,c as i,a as s,b as l,t as p,o as t}from"./app-DvfQ69-Y.js";const c="/images/linux-fdisk/linux-fdisk-01.png",r="/images/linux-fdisk/linux-fdisk-02.png",d="/images/linux-fdisk/linux-fdisk-03.png",o="/images/linux-fdisk/linux-fdisk-04.png",u="/images/linux-fdisk/linux-fdisk-05.png",m="/images/linux-fdisk/linux-fdisk-06.png",b={},v={id:"frontmatter-title",tabindex:"-1"},k={class:"header-anchor",href:"#frontmatter-title"};function f(a,n){return t(),i("div",null,[s("h1",v,[s("a",k,[s("span",null,p(a.$frontmatter.title),1)])]),n[0]||(n[0]=l('<p>Сначала добавим диск, в VirtualBox это делается в настройках виртуальной машины. Добавим новый диск размером 1гб.</p><p><img src="'+c+'" alt=""></p><p><img src="'+r+'" alt=""></p><p><img src="'+d+'" alt=""></p><p><img src="'+o+'" alt=""></p><p><img src="'+u+'" alt=""></p><p><img src="'+m+`" alt=""></p><p>Проверим, что в системе появился второй диск</p><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line">┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span></span>
+<span class="line">└──╼ <span class="token variable">$ls</span> /dev <span class="token operator">|</span> <span class="token function">grep</span> <span class="token parameter variable">-E</span> ^sd</span>
+<span class="line">sda</span>
+<span class="line">sda1</span>
+<span class="line">sdb</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Так же диски можно посмотреть через <code>fdisk</code> с параметром <code>-l</code>:</p><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line">┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span></span>
+<span class="line">└──╼ <span class="token variable">$sudo</span> <span class="token function">fdisk</span> <span class="token parameter variable">-l</span></span>
+<span class="line">Disk /dev/sda: <span class="token number">30</span> GiB, <span class="token number">32212254720</span> bytes, <span class="token number">62914560</span> sectors</span>
+<span class="line">Disk model: VBOX HARDDISK   </span>
+<span class="line">Units: sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes</span>
+<span class="line">Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">Disklabel type: dos</span>
+<span class="line">Disk identifier: 0x5bfff3f8</span>
+<span class="line"></span>
+<span class="line">Device     Boot Start      End  Sectors Size Id Type</span>
+<span class="line">/dev/sda1  *     <span class="token number">2048</span> <span class="token number">62910539</span> <span class="token number">62908492</span>  30G <span class="token number">83</span> Linux</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line">Disk /dev/sdb: <span class="token number">1</span> GiB, <span class="token number">1073741824</span> bytes, <span class="token number">2097152</span> sectors</span>
+<span class="line">Disk model: VBOX HARDDISK   </span>
+<span class="line">Units: sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes</span>
+<span class="line">Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Запустим <code>fdisk</code> и передадим ему путь к диску.</p><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line">┌─<span class="token punctuation">[</span>✗<span class="token punctuation">]</span>─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span></span>
+<span class="line">└──╼ <span class="token variable">$sudo</span> <span class="token function">fdisk</span> /dev/sdb</span>
+<span class="line"></span>
+<span class="line">Welcome to <span class="token function">fdisk</span> <span class="token punctuation">(</span>util-linux <span class="token number">2.36</span>.1<span class="token punctuation">)</span>.</span>
+<span class="line">Changes will remain <span class="token keyword">in</span> memory only, <span class="token keyword">until</span> you decide to <span class="token function">write</span> them.</span>
+<span class="line">Be careful before using the <span class="token function">write</span> command.</span>
+<span class="line"></span>
+<span class="line">Device does not contain a recognized partition table.</span>
+<span class="line">Created a new DOS disklabel with disk identifier 0x9ccf78a2.</span>
+<span class="line"></span>
+<span class="line">Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: </span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Создадим на диске таблицу разделов GPT</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">Command (m for help): g</span>
+<span class="line">Created a new GPT disklabel (GUID: 298E01AB-6142-C446-AB5B-EF5AF4D7D40D).</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div></div></div><p>Добавим один раздел размером 400мб.</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">Command (m for help): n</span>
+<span class="line">Partition number (1-128, default 1): 1</span>
+<span class="line">First sector (2048-2097118, default 2048): </span>
+<span class="line">Last sector, +/-sectors or +/-size{K,M,G,T,P} (2048-2097118, default 2097118): +400M</span>
+<span class="line"></span>
+<span class="line">Created a new partition 1 of type &#39;Linux filesystem&#39; and of size 400 MiB.</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>И второй на всё оставшееся место:</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">Command (m for help): n</span>
+<span class="line">Partition number (2-128, default 2): 2</span>
+<span class="line">First sector (821248-2097118, default 821248): </span>
+<span class="line">Last sector, +/-sectors or +/-size{K,M,G,T,P} (821248-2097118, default 2097118): </span>
+<span class="line"></span>
+<span class="line">Created a new partition 2 of type &#39;Linux filesystem&#39; and of size 623 MiB.</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Запишем изменения командой <code>w</code></p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line">Command (m for help): w</span>
+<span class="line">The partition table has been altered.</span>
+<span class="line">Calling ioctl() to re-read partition table.</span>
+<span class="line">Syncing disks.</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Проверим ещё раз список дисков, теперь на втором диске присутствуют два раздела.</p><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line">┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span></span>
+<span class="line">└──╼ <span class="token variable">$sudo</span> <span class="token function">fdisk</span> <span class="token parameter variable">-l</span></span>
+<span class="line">Disk /dev/sda: <span class="token number">30</span> GiB, <span class="token number">32212254720</span> bytes, <span class="token number">62914560</span> sectors</span>
+<span class="line">Disk model: VBOX HARDDISK   </span>
+<span class="line">Units: sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes</span>
+<span class="line">Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">Disklabel type: dos</span>
+<span class="line">Disk identifier: 0x5bfff3f8</span>
+<span class="line"></span>
+<span class="line">Device     Boot Start      End  Sectors Size Id Type</span>
+<span class="line">/dev/sda1  *     <span class="token number">2048</span> <span class="token number">62910539</span> <span class="token number">62908492</span>  30G <span class="token number">83</span> Linux</span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line">Disk /dev/sdb: <span class="token number">1</span> GiB, <span class="token number">1073741824</span> bytes, <span class="token number">2097152</span> sectors</span>
+<span class="line">Disk model: VBOX HARDDISK   </span>
+<span class="line">Units: sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes</span>
+<span class="line">Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes</span>
+<span class="line">Disklabel type: gpt</span>
+<span class="line">Disk identifier: 298E01AB-6142-C446-AB5B-EF5AF4D7D40D</span>
+<span class="line"></span>
+<span class="line">Device      Start     End Sectors  Size Type</span>
+<span class="line">/dev/sdb1    <span class="token number">2048</span>  <span class="token number">821247</span>  <span class="token number">819200</span>  400M Linux filesystem</span>
+<span class="line">/dev/sdb2  <span class="token number">821248</span> <span class="token number">2097118</span> <span class="token number">1275871</span>  623M Linux filesystem</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Так же посмотреть список дисков и связанные с ними разделы можно командой <code>lsblk</code>:</p><div class="language-bash line-numbers-mode" data-highlighter="prismjs" data-ext="sh"><pre><code><span class="line">┌─<span class="token punctuation">[</span>user@parrot<span class="token punctuation">]</span>─<span class="token punctuation">[</span>~<span class="token punctuation">]</span></span>
+<span class="line">└──╼ <span class="token variable">$lsblk</span></span>
+<span class="line">NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT</span>
+<span class="line">sda      <span class="token number">8</span>:0    <span class="token number">0</span>   30G  <span class="token number">0</span> disk </span>
+<span class="line">└─sda1   <span class="token number">8</span>:1    <span class="token number">0</span>   30G  <span class="token number">0</span> part /home</span>
+<span class="line">sdb      <span class="token number">8</span>:16   <span class="token number">0</span>    1G  <span class="token number">0</span> disk </span>
+<span class="line">├─sdb1   <span class="token number">8</span>:17   <span class="token number">0</span>  400M  <span class="token number">0</span> part </span>
+<span class="line">└─sdb2   <span class="token number">8</span>:18   <span class="token number">0</span>  623M  <span class="token number">0</span> part </span>
+<span class="line">sr0     <span class="token number">11</span>:0    <span class="token number">1</span> 1024M  <span class="token number">0</span> rom  </span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="ссылки" tabindex="-1"><a class="header-anchor" href="#ссылки"><span>Ссылки</span></a></h2><ul><li><a href="https://basis.gnulinux.pro/ru/latest/basis/22/22._%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81_%D0%B4%D0%B8%D1%81%D0%BA%D0%B0%D0%BC%D0%B8.html" target="_blank" rel="noopener noreferrer">basis.gnulinux.pro: 22. Работа с дисками</a></li></ul>`,27))])}const g=e(b,[["render",f]]),y=JSON.parse('{"path":"/linux-fdisk.html","title":"Разметка диска в Linux с помощью fdisk","lang":"ru-RU","frontmatter":{"title":"Разметка диска в Linux с помощью fdisk","date":"2023-12-13","categories":["Linux"],"tags":["fdisk"]},"git":{"updatedTime":1744621280000,"contributors":[{"name":"Petro","username":"Petro","email":"petrovdrm86@yandex.ru","commits":2,"url":"https://github.com/Petro"}],"changelog":[{"hash":"711f4e23d676eb57130f06703f8ce3ad7d6a7937","time":1744621280000,"email":"petrovdrm86@yandex.ru","author":"Petro","message":"Обновлены библиотеки"},{"hash":"dd8f013fef1fc4cbefc736d36c41a6b09aabf4e0","time":1702479871000,"email":"petrovdrm86@yandex.ru","author":"Petro","message":"add post"}]},"filePathRelative":"linux-fdisk.md"}');export{g as comp,y as data};
