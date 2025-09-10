@@ -18,6 +18,12 @@ tags:
 convert -density 300 +adjoin source.pdf -quality 100 img-%04d.png
 ```
 
+Другой способ:
+
+```
+pdftoppm -png -r 300 source.pdf img
+```
+
 Для установки Tesseract используйте следующие команды ([список и коды языков](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)).
 
 ```
