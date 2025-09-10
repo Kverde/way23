@@ -12,7 +12,7 @@ tags:
 
 [Tesseract](https://github.com/tesseract-ocr/tesseract) — свободное средство для распознавания текста.
 
-Если книга для которой нужно распознать текст в формате PDF, то сначала нужно конфертировать её в набор изображений. Для этого можно использовать соманду `convert` из [ImageMagic](https://imagemagick.org).
+Если книга для которой нужно распознать текст в формате PDF, то сначала нужно конвертировать её в набор изображений. Для этого можно использовать команду `convert` из [ImageMagic](https://imagemagick.org).
 
 ```
 convert -density 300 +adjoin source.pdf -quality 100 img-%04d.png
